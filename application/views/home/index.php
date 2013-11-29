@@ -9,7 +9,11 @@ $(document).ready(function(e) {
 	$('input').click(function(e) {
 		var id=$(this).attr('data-c');
 		
-		//$('.')
+		if (!$('input.checkbox_check').is(':checked')) {
+			$(this).attr('checked','checked');
+		}else
+		{$(this).removeAttr('checked');
+			}
 		
 	});
 });
