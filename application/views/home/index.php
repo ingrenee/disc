@@ -3,22 +3,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
+<script type="text/javascript" src="<?PHP echo base_url();?>/html/js/jquery-1.10.2.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('input').click(function(e) {
+		var id=$(this).attr('data-c');
+		
+		//$('.')
+		
+	});
+});
+</script>
 </head>
 
 <body>
 <pre>
 <?PHP foreach($t as $k => $v):
 ?>
-<ul>
+<table>
 <?PHP foreach($v as $kk => $vv):
 ?>
-<li><?PHP echo $kk;?>
-
-<input type="radio" name="k[<?PHP echo $k?>][<?PHP echo $vv?>]" value="1">
-<input type="radio" name="k[<?PHP echo $k?>][<?PHP echo $vv?>]" value="2">
-</li>
+<tr>
+<td>
+<?PHP echo $kk;?>
+</td>
+<td>
+<input type="radio" class="<?PHP echo $vv.'1';?>  class-<?PHP echo $k.$vv?>" data-c="<?PHP echo $k.$vv?>" name="kmas[<?PHP echo $k?>]" value="1">
+</td>
+<td>
+<input type="radio"  class="<?PHP echo $vv.'2';?> class-<?PHP echo $k.$vv?>" data-c="<?PHP echo $k.$vv?>" name="kmenos[<?PHP echo $k?>]" value="2">
+</td>
+</tr>
 <?PHP endforeach;?>
-</ul>
+</table>
 <?PHP endforeach;?>
 </body>
 </html>
