@@ -23,13 +23,16 @@ class Home extends CI_Controller {
 $str='Entusiasta,Rápido(a),Lógico(a),Apacible
 ';
 $num='c,z,e,t';
+$num='i,d,c,s';
+		
 $t[]=$this->combina($str,$num);
 
 /*--------2--------*/
 $str='Cauteloso(a),Decidido(a),Receptivo(a),Bondadoso(a)
 ';
 $num='e,z,c,t';
-
+$num='c,d,i,s';
+		
 $t[]=$this->combina($str,$num);
 
 /*--------3--------*/
@@ -37,7 +40,7 @@ $str="Amigable,
 Preciso(a),Franco(a),Tranquilo(a)
 ";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 
@@ -45,7 +48,7 @@ $t[]=$this->combina($str,$num);
 $str="Elocuente, 
 Controlado(a),Tolerante,Decisivo(a)";
 $num='c,e,t,z';
-
+$num='i,c,s,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -54,7 +57,7 @@ $t[]=$this->combina($str,$num);
 $str="Atrevido(a),Concienzudo(a),Comunicativo(a),Moderado(a)
 ";
 $num='z,e,c,t';
-
+$num='d,c,i,s';
 $t[]=$this->combina($str,$num);
 
 
@@ -63,7 +66,7 @@ $t[]=$this->combina($str,$num);
 $str="Ameno(a),Ingenioso(a),Investigador(a),Acepta Riesgos
 ";
 $num='t,c,e,z';
-
+$num='s,i,c,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -71,7 +74,7 @@ $t[]=$this->combina($str,$num);
 $str="Expresivo(a),Cuidadoso(a),Dominante,Sensible
 ";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 
@@ -80,6 +83,7 @@ $t[]=$this->combina($str,$num);
 $str="Extrovertido(a),Precavido(a),Constante,Impaciente
 ";
 $num='c,e,t,z';
+$num='i,c,s,d';
 
 $t[]=$this->combina($str,$num);
 
@@ -90,7 +94,7 @@ $t[]=$this->combina($str,$num);
 $str="Discreto(a),Complaciente,Encantador(a),Insistente
 ";
 $num='e,t,c,z';
-
+$num='c,s,i,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -99,7 +103,7 @@ $t[]=$this->combina($str,$num);
 $str="Valeroso(a),Anima a los demás,Pacifico(a),Perfeccionista
 ";
 $num='z,c,t,e';
-
+$num='d,i,s,c';
 $t[]=$this->combina($str,$num);
 
 
@@ -107,7 +111,7 @@ $t[]=$this->combina($str,$num);
 $str="Reservado(a),Atento(a),Osado(a),Alegre
 ";
 $num='e,t,z,c';
-
+$num='c,s,d,i';
 $t[]=$this->combina($str,$num);
 
 
@@ -115,7 +119,7 @@ $t[]=$this->combina($str,$num);
 $str="Estimulante,Gentil,Perceptivo(a),Independiente
 ";
 $num='c,t,e,z';
-
+$num='i,s,c,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -124,7 +128,7 @@ $t[]=$this->combina($str,$num);
 $str="Competitivo(a),Considerado(a),Alegre,Sagaz
 ";
 $num='z,t,c,e';
-
+$num='d,s,i,c';
 $t[]=$this->combina($str,$num);
 
 
@@ -132,7 +136,7 @@ $t[]=$this->combina($str,$num);
 $str="Meticuloso(a),Obediente ,Ideas Firmes,Alentador(a)
 ";
 $num='e,t,z,c';
-
+$num='c,s,d,i';
 $t[]=$this->combina($str,$num);
 
 
@@ -140,7 +144,7 @@ $t[]=$this->combina($str,$num);
 $str="Popular,Reflexivo(a),Tenaz,Calmado(a)
 ";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 
@@ -150,7 +154,7 @@ $t[]=$this->combina($str,$num);
 $str="Analítico(a),Audaz,Leal,Promotor(a)
 ";
 $num='e,z,t,c';
-
+$num='c,d,s,i';
 $t[]=$this->combina($str,$num);
 
 
@@ -158,7 +162,7 @@ $t[]=$this->combina($str,$num);
 /*--------17--------*/
 $str="Sociable,Paciente,Autosuficiente,Certero(a)";
 $num='c,t,z,e';
-
+$num='i,s,d,c';
 $t[]=$this->combina($str,$num);
 
 
@@ -166,7 +170,7 @@ $t[]=$this->combina($str,$num);
 /*--------18--------*/
 $str="Adaptable,Resuelto(a),Prevenido(a),Vivaz";
 $num='t,z,e,c';
-
+$num='s,d,c,i';
 $t[]=$this->combina($str,$num);
 
 
@@ -175,7 +179,7 @@ $t[]=$this->combina($str,$num);
 /*--------19--------*/
 $str="Agresivo(a),Impetuoso(a),Amistoso(a),Discerniente";
 $num='z,c,t,e';
-
+$num='d,i,s,c';
 $t[]=$this->combina($str,$num);
 
 
@@ -183,7 +187,7 @@ $t[]=$this->combina($str,$num);
 /*--------20--------*/
 $str="De trato Fácil,Compasivo(a),Cauto(a),Habla Directo";
 $num='c,t,e,z';
-
+$num='i,s,c,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -192,7 +196,7 @@ $t[]=$this->combina($str,$num);
 /*--------21--------*/
 $str="Evaluador(a),Generoso(a),Animado(a),Persistente";
 $num='e,t,c,z';
-
+$num='c,s,i,d';
 $t[]=$this->combina($str,$num);
 
 
@@ -200,48 +204,48 @@ $t[]=$this->combina($str,$num);
 /*--------22--------*/
 $str="Impulsivo(a),Cuida los Detalles,Enérgico(a),Tranquilo(a)";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 
 /*--------23--------*/
 $str="Sociable,Sistemático(a),Vigoroso(a),Tolerante";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 /*--------24--------*/
 $str="Cautivador(a),Contento(a),Exigente,Apegado(a) a las normas";
 $num='c,t,z,e';
-
+$num='i,s,d,c';
 $t[]=$this->combina($str,$num);
 
 
 /*--------25--------*/
 $str="Le agrada discutir,Metódico(a),Comedido(a),Desenvuelto(a)";
-$num='z,e,t,n';
-
+$num='z,e,t,c';
+$num='d,c,s,i';
 $t[]=$this->combina($str,$num);
 
 
 /*--------26--------*/
 $str="Jovial,Preciso(a),Directo(a),Ecuánime";
 $num='c,e,z,t';
-
+$num='i,c,d,s';
 $t[]=$this->combina($str,$num);
 
 
 /*--------27--------*/
 $str="Inquieto(a),Amable,Elocuente,Cuidadoso(a)";
 $num='z,t,c,e';
-
+$num='d,s,i,c';
 $t[]=$this->combina($str,$num);
 
 
 /*--------28--------*/
 $str="Prudente,Pionero(a),Espontáneo(a),Colaborador";
 $num='e,z,c,t';
-
+$num='c,d,i,s';
 $t[]=$this->combina($str,$num);
 
 
@@ -259,6 +263,7 @@ $data['t']=$t;
 	
 	function  combina($str,$num)
 	{
+		
 		$t=explode(',',$str);
 		$n=explode(',',$num);
 		//print_r($t);
