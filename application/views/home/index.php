@@ -17,7 +17,7 @@
         <div class="page">
 
 		<div class="info"  id="info">Info</div>
-<form method="post" action="" id="test-disc" >
+<form method="post" action="<?PHP echo site_url('analiza/index');?>" id="test-disc" >
             <div class="main">
                 <?PHP foreach ($t as $k => $v):
                     ?>
@@ -45,7 +45,19 @@
                     </div>
                 <?PHP endforeach; ?>
             </div>
-			
+			<input type="text" name="d1" value="" id="d1">
+  			<input type="text" name="d2" value="" id="d2">
+            
+            <input type="text" name="i1" value="" id="i1">
+  			<input type="text" name="i2" value="" id="i2">
+            
+            <input type="text" name="s1" value="" id="s1">
+  			<input type="text" name="s2" value="" id="s2">
+            
+            <input type="text" name="c1" value="" id="c1">
+  			<input type="text" name="c2" value="" id="c2">            
+            
+            
 			<input name="Botón" type="button" onclick="enviar()" value="Botón">
 			</form>
 			

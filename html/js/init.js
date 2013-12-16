@@ -51,6 +51,18 @@ $(document).ready(function(e) {
 		str=str+":::i1:"+i1+"-i2:"+i2;
 		str=str+":::s1:"+s1+"-s2:"+s2;
 		str=str+":::c1:"+c1+"-c2:"+c2;
+
+		$('#d1').val(d1);
+		$('#i1').val(i1);
+		$('#s1').val(s1);		
+		$('#c1').val(c1);
+		
+		$('#d2').val(d2);
+		$('#i2').val(i2);
+		$('#s2').val(s2);		
+		$('#c2').val(c2);						
+		
+		
 		
 		$('.info').html(str);
 		
