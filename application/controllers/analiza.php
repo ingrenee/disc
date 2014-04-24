@@ -30,7 +30,10 @@ class Analiza extends CI_Controller {
 		$s2=$this->input->post('s2');
 		
 		$c1=$this->input->post('c1');
-		$c2=$this->input->post('c2');								
+		$c2=$this->input->post('c2');
+		
+		$neg_n=(int)$this->input->post('neg_n');
+		$pos_n=(int)$this->input->post('pos_n');								
 		
 		
 		//diferencias
@@ -41,8 +44,8 @@ class Analiza extends CI_Controller {
 		$dif_c=$c1-$c2;						
 		
 		//comprobar
-		$disc_pos=$d1+$i1+$s1+$c1;
-		$disc_neg=$d2+$i2+$s2+$c2;		
+		$disc_pos=$d1+$i1+$s1+$c1+$pos_n;
+		$disc_neg=$d2+$i2+$s2+$c2 + $neg_n;		
 		
 		
 		

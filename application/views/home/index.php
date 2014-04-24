@@ -25,7 +25,7 @@
                         <ul class="block">
                             
                             <li>
-                                <span>&nbsp;</span>
+                                <span><?PHP echo $k+1;?></span>
                                 <label>Mas</label><label>Menos</label>
                             </li>
                             <?PHP foreach ($v as $kk => $vv):
@@ -35,9 +35,9 @@
                                         <?PHP echo $kk; ?>
                                     </span>
                                     <label>
-                                        <input type="radio" class="radio <?PHP echo $vv . '1'; ?> mas<?PHP echo $k ?> mas<?PHP echo $k . $vv ?>" data-group="menos<?PHP echo $k ?>" data-c="menos<?PHP echo $k . $vv ?>" name="kmas[<?PHP echo $k ?>]" value="1">
+                                        <input type="radio" id="mas-<?PHP echo $k+1;?>-<?PHP echo $vv;?>" class="radio <?PHP echo $vv . '1'; ?> mas<?PHP echo $k ?> mas<?PHP echo $k . $vv ?>" data-group="menos<?PHP echo $k ?>" data-c="menos<?PHP echo $k . $vv ?>" name="kmas[<?PHP echo $k ?>]" value="1">
                                     </label><label>
-                                        <input type="radio"  class="radio <?PHP echo $vv . '2'; ?> menos<?PHP echo $k ?> menos<?PHP echo $k . $vv ?>" data-group="mas<?PHP echo $k ?>" data-c="mas<?PHP echo $k . $vv ?>" name="kmenos[<?PHP echo $k ?>]" value="2">
+                                        <input type="radio" id="menos-<?PHP echo $k+1;?>-<?PHP echo $vv;?>"  class="radio <?PHP echo $vv . '2'; ?> menos<?PHP echo $k ?> menos<?PHP echo $k . $vv ?>" data-group="mas<?PHP echo $k ?>" data-c="mas<?PHP echo $k . $vv ?>" name="kmenos[<?PHP echo $k ?>]" value="2">
                                     </label>
                                 </li>
                             <?PHP endforeach; ?>
@@ -55,7 +55,10 @@
   			<input type="text" name="s2" value="" id="s2">
             
             <input type="text" name="c1" value="" id="c1">
-  			<input type="text" name="c2" value="" id="c2">            
+  			<input type="text" name="c2" value="" id="c2"> 
+			
+			     <input type="text" name="neg_n" value="" id="neg_n">
+  			<input type="text" name="pos_n" value="" id="pos_n">            
             
             
 			<input name="Botón" type="button" onclick="enviar()" value="Botón">

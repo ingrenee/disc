@@ -39,14 +39,22 @@ $(document).ready(function(e) {
 	{
 		var c1,c2,d1,d2,i1,i2,s1,s2;
 		
-		d1=contar('d1');
-		d2=contar('d2');
-		i1=contar('i1');
-		i2=contar('i2');
-		s1=contar('s1');
-		s2=contar('s2');
-		c1=contar('c1');
-	c2=contar('c2');
+		d1=contar('.d1');
+		nd1=contar('#mas-10-d');
+		d1=d1-nd1;
+		
+		d2=contar('.d2');
+		i1=contar('.i1');
+		i2=contar('.i2');
+		s1=contar('.s1');
+		s2=contar('.s2');
+		
+		ns2=contar('#menos-16-s');
+		s2=s2-ns2;
+		
+		
+		c1=contar('.c1');
+		c2=contar('.c2');
 		var str=":::d1:"+d1+"-d2:"+d2;
 		str=str+":::i1:"+i1+"-i2:"+i2;
 		str=str+":::s1:"+s1+"-s2:"+s2;
@@ -56,6 +64,9 @@ $(document).ready(function(e) {
 		$('#i1').val(i1);
 		$('#s1').val(s1);		
 		$('#c1').val(c1);
+		
+		$('#pos_n').val(nd1);
+		$('#neg_n').val(ns2);
 		
 		$('#d2').val(d2);
 		$('#i2').val(i2);
@@ -70,7 +81,7 @@ $(document).ready(function(e) {
 		
 		function contar(c)
 		{ var i=0;
-			$('.'+c).each(function(index, element) {
+			$(c).each(function(index, element) {
 		if($(this).is(':checked'))
 		{
 			i++;

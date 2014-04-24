@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : local
-Source Server Version : 50524
+Source Server         : localhost
+Source Server Version : 50516
 Source Host           : localhost:3306
 Source Database       : hayemple_psico
 
 Target Server Type    : MYSQL
-Target Server Version : 50524
+Target Server Version : 50516
 File Encoding         : 65001
 
-Date: 2013-12-16 11:40:36
+Date: 2014-04-24 00:22:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2434,15 +2434,16 @@ INSERT INTO `disc_codigos` VALUES ('1111', 'Subactivo');
 -- ----------------------------
 DROP TABLE IF EXISTS `disc_data`;
 CREATE TABLE `disc_data` (
-  `perfil` varchar(255) DEFAULT NULL,
-  `bloque` varchar(255) DEFAULT NULL,
-  `patron` varchar(255) DEFAULT NULL,
-  `descripcion` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `perfil` text,
+  `bloque` text,
+  `patron` text,
+  `descripcion` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of disc_data
 -- ----------------------------
+INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL ALENTADOR.', '');
 INSERT INTO `disc_data` VALUES ('alentador', 'e', 'E1', 'Acepta la agresión, tiende a aparentar dar poca importancia a la necesidad que tiene de afecto.');
 INSERT INTO `disc_data` VALUES ('alentador', 'm', 'M1', 'Controlar su ambiente o a su público.');
 INSERT INTO `disc_data` VALUES ('alentador', 'j', 'J1', 'La forma en que proyecta su fuerza personal, carácter  y posición social. ');
@@ -2452,8 +2453,8 @@ INSERT INTO `disc_data` VALUES ('alentador', 'a', 'A1', 'Su enfoque de que “el
 INSERT INTO `disc_data` VALUES ('alentador', 'b', 'B1', 'Se vuelve manipulador, pendenciero, beligerante. ');
 INSERT INTO `disc_data` VALUES ('alentador', 't', 'T1', 'Ser demasiado blando, perder su posición social. ');
 INSERT INTO `disc_data` VALUES ('alentador', 'se', 'SE1', 'Fuera más genuina su sensibilidad; estuviera más dispuesto a ayudar a otros a tener éxito en su propio desarrollo personal. ');
-INSERT INTO `disc_data` VALUES ('alentador', 'o1', 'O11', 'Las personas con patrón alentador saben con exactitud los resultados que quieren, pero no siempre los verbalizan de inmediato.  Manifiestan cuáles son los resultados que quieren sólo después de que se haya creado un ambiente apropiado y la otra persona es');
-INSERT INTO `disc_data` VALUES ('alentador', 'o2', 'O12', 'El alentador pude ser encantador en su trato con los demás.  Es persuasivo para obtener ayuda cuando se le presentan detalles repetitivos y que consumen mucho tiempo.  Sin embargo, las personas a menudo experimentan ante ellos una sensación de conflicto, ');
+INSERT INTO `disc_data` VALUES ('alentador', 'o1', 'O11', 'Las personas con patrón alentador saben con exactitud los resultados que quieren, pero no siempre los verbalizan de inmediato.  Manifiestan cuáles son los resultados que quieren sólo después de que se haya creado un ambiente apropiado y la otra persona está dispuesta a aceptarlos.  Por ejemplo, estas personas ofrecen amistad a quienes desean ser aceptados, más autoridad a quienes buscan poder y seguridad a quienes buscan un ambiente predecible.');
+INSERT INTO `disc_data` VALUES ('alentador', 'o2', 'O12', 'El alentador pude ser encantador en su trato con los demás.  Es persuasivo para obtener ayuda cuando se le presentan detalles repetitivos y que consumen mucho tiempo.  Sin embargo, las personas a menudo experimentan ante ellos una sensación de conflicto,  al sentirse por un lado atraídos, y curiosamente al mismo tiempo distanciados.  Otras pueden sentirse “utilizadas”.  Aunque algunas veces el alentador inspira temor en los demás y rechaza sus decisiones, el Alentador suele ser apreciado por sus colaboradores.  Esto lo consigue al usar siempre que le es posible su enorme capacidad de palabra para persuadir.  El Alentador prefiere alcanzar sus objetivos no dominando a las personas sino haciendo de agente para realizar el trabajo.  ');
 INSERT INTO `disc_data` VALUES ('alentador', 'o3', 'O13', '');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL REALIZADOR', '');
 INSERT INTO `disc_data` VALUES ('realizador', 'e', 'E2', 'Activo, diligente, muestra frustración..');
@@ -2465,9 +2466,9 @@ INSERT INTO `disc_data` VALUES ('realizador', 'a', 'A2', 'Confianza en si mismo,
 INSERT INTO `disc_data` VALUES ('realizador', 'b', 'B2', 'Se frustra e impacienta con los demás, se convierte en una persona que “lo hace todo”  en vez de ser alguien que delega.');
 INSERT INTO `disc_data` VALUES ('realizador', 't', 'T2', 'A quienes tienen niveles inferiores o competitivos de trabajo, que afectan los resultados. ');
 INSERT INTO `disc_data` VALUES ('realizador', 'se', 'SE2', 'Dejara de pensar en “esto o lo otro”, estableciera su prioridades con mayor claridad y aceptara enfoques alternativos, estuviera dispuesto a sacrificar los beneficios a corto plazo por otros a largo plazo. ');
-INSERT INTO `disc_data` VALUES ('realizador', 'o1', 'O21', 'La motivación del Patrón Realizador surge en gran parte de su interior y de metas personales muy profundas.  Este compromiso previo con sus propias metas impide que acepte automáticamente las metas del grupo.  El Realizador necesita combinar sus metas per');
-INSERT INTO `disc_data` VALUES ('realizador', 'o2', 'O22', 'El Realizador demuestra un profundo interés por su trabajo y un continuo e intenso afán por conseguir lo que se propone.   Tiene una alta opinión de su trabajo y suele realizar las cosas por él mismo para asegurarse de que todo esté bien hecho.  Valora el');
-INSERT INTO `disc_data` VALUES ('realizador', 'o3', 'O23', 'Si el Realizador se comunica más con los demás dejaría de pensar en “esto o lo otro”, del “yo mismo lo tengo que hacer” o “quiero todo el crédito para mí”.  Tal vez necesite ayuda para considerar otras propuestas y conseguir los resultados que desea.  El ');
+INSERT INTO `disc_data` VALUES ('realizador', 'o1', 'O21', 'La motivación del Patrón Realizador surge en gran parte de su interior y de metas personales muy profundas.  Este compromiso previo con sus propias metas impide que acepte automáticamente las metas del grupo.  El Realizador necesita combinar sus metas personales con las metas de la organización.  Como el Realizador siempre ha ejercido control sobre los aspectos más importantes de su vida, desarrolla a menudo un fuerte sentido de la responsabilidad. ');
+INSERT INTO `disc_data` VALUES ('realizador', 'o2', 'O22', 'El Realizador demuestra un profundo interés por su trabajo y un continuo e intenso afán por conseguir lo que se propone.   Tiene una alta opinión de su trabajo y suele realizar las cosas por él mismo para asegurarse de que todo esté bien hecho.  Valora el trabajo arduo y bajo presión “prefiere hacer” que delegar en otro.   Cuando delega algo, suele volver ha realizarlo si no satisface sus expectativas.  Su premisa dice: “si tengo éxito, el mérito me corresponde, pero si fracaso, asumo la responsabilidad”. ');
+INSERT INTO `disc_data` VALUES ('realizador', 'o3', 'O23', 'Si el Realizador se comunica más con los demás dejaría de pensar en “esto o lo otro”, del “yo mismo lo tengo que hacer” o “quiero todo el crédito para mí”.  Tal vez necesite ayuda para considerar otras propuestas y conseguir los resultados que desea.  El Realizador sabe que funciona al máximo de su capacidad y espera un reconocimiento similar a su contribución, en ciertas organizaciones mediante ganancias elevadas y en otras con posiciones de mando.    ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL PERFECCIONISTA', '');
 INSERT INTO `disc_data` VALUES ('perfeccionista', 'e', 'E3', 'Competente para hacer bien las cosas, reservado, cauteloso.');
 INSERT INTO `disc_data` VALUES ('perfeccionista', 'm', 'M3', 'Logros estables, predecible.');
@@ -2478,9 +2479,9 @@ INSERT INTO `disc_data` VALUES ('perfeccionista', 'a', 'A3', 'Los procedimientos
 INSERT INTO `disc_data` VALUES ('perfeccionista', 'b', 'B3', 'Es discreto, diplomático. ');
 INSERT INTO `disc_data` VALUES ('perfeccionista', 't', 'T3', 'El antagonismo.');
 INSERT INTO `disc_data` VALUES ('perfeccionista', 'se', 'SE3', 'Fuera más flexible en su papel, fuera más independiente e interdependiente, tuviera más fe en sí mismo y si se viera a sí mismo como una persona valiosa.');
-INSERT INTO `disc_data` VALUES ('perfeccionista', 'o1', 'O31', 'El Perfeccionista es metódico y preciso en su forma de pensar y trabajar, por lo que suele seguir procedimientos ordenados tanto en su vida personal como laboral.   Es extremadamente concienzudo y se esmera en el trabajo detallado y preciso.   El Perfecci');
-INSERT INTO `disc_data` VALUES ('perfeccionista', 'o2', 'O32', 'El perfeccionista se puede empantanar en los detalles cuando tiene que tomar decisiones.  Sabe tomar decisiones importantes, pero se le puede criticar por el tiempo que le toma reunir y analizar la información antes de decidir.  Aunque le agrada conocer l');
-INSERT INTO `disc_data` VALUES ('perfeccionista', 'o3', 'O33', 'El Perfeccionista se evalúa y evalúa a los demás bajo normas precisas que aseguren resultados concretos y se adhiere a procedimientos operativos normales. Para la organización es valiosa esta atención concienzuda a las normas y calidad, sin embargo, el Pe');
+INSERT INTO `disc_data` VALUES ('perfeccionista', 'o1', 'O31', 'El Perfeccionista es metódico y preciso en su forma de pensar y trabajar, por lo que suele seguir procedimientos ordenados tanto en su vida personal como laboral.   Es extremadamente concienzudo y se esmera en el trabajo detallado y preciso.   El Perfeccionista desea condiciones estables y actividades fáciles de predecir, por lo que se siente cómodo en un ambiente laboral claramente definido.  Desea claridad respecto a lo que se espera de él en el trabajo, de cuánto tiempo dispone y cómo se va a evaluar su trabajo.');
+INSERT INTO `disc_data` VALUES ('perfeccionista', 'o2', 'O32', 'El perfeccionista se puede empantanar en los detalles cuando tiene que tomar decisiones.  Sabe tomar decisiones importantes, pero se le puede criticar por el tiempo que le toma reunir y analizar la información antes de decidir.  Aunque le agrada conocer la opinión de sus superiores, el Perfeccionista es capaz de arriesgarse  cuando cuenta con datos que puede interpretar y usar para sacar conclusiones propias. ');
+INSERT INTO `disc_data` VALUES ('perfeccionista', 'o3', 'O33', 'El Perfeccionista se evalúa y evalúa a los demás bajo normas precisas que aseguren resultados concretos y se adhiere a procedimientos operativos normales. Para la organización es valiosa esta atención concienzuda a las normas y calidad, sin embargo, el Perfeccionista tiende a definir su valor más por lo que hace que por lo que es como persona.  Por lo tanto, suele reaccionar a los cumplidos personales con la idea de que: “¿Qué querrá esta persona?” , si aceptará un cumplido sincero por quien es, podría aumentar su confianza en sí mismo. ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL CREATIVO', '');
 INSERT INTO `disc_data` VALUES ('creativo', 'e', 'E4', 'Acepta la agresión, puede contenerse al expresarse. ');
 INSERT INTO `disc_data` VALUES ('creativo', 'm', 'M4', 'Dominar, logros únicos. ');
@@ -2491,9 +2492,9 @@ INSERT INTO `disc_data` VALUES ('creativo', 'a', 'A4', 'La brusquedad, la actitu
 INSERT INTO `disc_data` VALUES ('creativo', 'b', 'B4', 'Se aburre fácilmente con el trabajo rutinario, cuando se le restringe se torna malhumorado, es independiente. ');
 INSERT INTO `disc_data` VALUES ('creativo', 't', 'T4', 'No poder influir, no alcanzar el nivel establecido. ');
 INSERT INTO `disc_data` VALUES ('creativo', 'se', 'SE4', 'Fuera más amable, usara más tacto al comunicarse, cooperara más con el equipo, reconociera que existen sanciones.');
-INSERT INTO `disc_data` VALUES ('creativo', 'o1', 'O41', 'Las personas con un Patrón Creativo muestran dos fuerzas opuestas en su comportamiento.   El deseo de resultados tangibles se contrapone a un impulso de igual magnitud por la perfección.  Su agresividad se templa con su sensibilidad.  La rapidez de pensam');
-INSERT INTO `disc_data` VALUES ('creativo', 'o2', 'O42', 'Las personas creativas preveen de manera extraordinaria el enfoque que hay que dar a un proyecto y efectúan los cambios oportunos.  En vista de que las personas con un Patrón Creativo son perfeccionistas y cuentan con una gran habilidad para planear, los ');
-INSERT INTO `disc_data` VALUES ('creativo', 'o3', 'O43', 'La persona creativa desea libertad para explorar y la autoridad para examinar y verificar los resultados.  Puede tomar las decisiones diarias con rapidez,  pero puede ser extremadamente cauteloso al tomar decisiones de verdadera importancia.  “¿Debería ac');
+INSERT INTO `disc_data` VALUES ('creativo', 'o1', 'O41', 'Las personas con un Patrón Creativo muestran dos fuerzas opuestas en su comportamiento.   El deseo de resultados tangibles se contrapone a un impulso de igual magnitud por la perfección.  Su agresividad se templa con su sensibilidad.  La rapidez de pensamiento y tiempo de reacción se ven frenados por el deseo de explorar todas las soluciones posibles antes de tomar una decisión. ');
+INSERT INTO `disc_data` VALUES ('creativo', 'o2', 'O42', 'Las personas creativas preveen de manera extraordinaria el enfoque que hay que dar a un proyecto y efectúan los cambios oportunos.  En vista de que las personas con un Patrón Creativo son perfeccionistas y cuentan con una gran habilidad para planear, los cambios que efectúan suelen ser apropiados, aunque  les pueda faltar atención a las relaciones interpersonales. ');
+INSERT INTO `disc_data` VALUES ('creativo', 'o3', 'O43', 'La persona creativa desea libertad para explorar y la autoridad para examinar y verificar los resultados.  Puede tomar las decisiones diarias con rapidez,  pero puede ser extremadamente cauteloso al tomar decisiones de verdadera importancia.  “¿Debería aceptar este ascenso?”, “¿debería mudarme a otro sitio?”.   Por su necesidad de obtener resultados y perfección, la persona creativa no se preocupa mucho por las formas sociales.  Puede parecer fría, ajena y brusca. ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL OBJETIVO', '');
 INSERT INTO `disc_data` VALUES ('objetivo', 'e', 'E5', 'Puede rechazar la agresión interpersonal. ');
 INSERT INTO `disc_data` VALUES ('objetivo', 'm', 'M5', 'La exactitud. ');
@@ -2504,9 +2505,9 @@ INSERT INTO `disc_data` VALUES ('objetivo', 'a', 'A5', 'El análisis. ');
 INSERT INTO `disc_data` VALUES ('objetivo', 'b', 'B5', 'Se vuelve aprensivo.');
 INSERT INTO `disc_data` VALUES ('objetivo', 't', 'T5', 'Actos irracionales, el ridículo.');
 INSERT INTO `disc_data` VALUES ('objetivo', 'se', 'SE5', 'Fuera más abierto, compartiera en público su perspicacia y opiniones. ');
-INSERT INTO `disc_data` VALUES ('objetivo', 'o1', 'O51', 'La capacidad de pensamiento crítico suele estar muy desarrollada en el Objetivo.  Recalca la importancia de sacar conclusiones y basar las acciones en hechos.  Busca la precisión y exactitud en todo lo que hace.  Sin embargo, para llevar a cabo con eficie');
-INSERT INTO `disc_data` VALUES ('objetivo', 'o2', 'O52', 'El Objetivo prefiere trabajar con personas que , como él, prefieren mantener un ambiente laboral tranquilo.  Como puede mostrarse reticente en expresar sus sentimiento, hay quienes lo consideran tímido.  Se siente particularmente incómodo ante personas ag');
-INSERT INTO `disc_data` VALUES ('objetivo', 'o3', 'O53', 'El Objetivo se preocupa por llegar a respuestas “correctas” y le puede resultar difícil tomar decisiones en situaciones ambiguas.  Su tendencia a preocuparse le puede llevar a una “parálisis por análisis”.  Con demasiada frecuencia, cuando comete un error');
+INSERT INTO `disc_data` VALUES ('objetivo', 'o1', 'O51', 'La capacidad de pensamiento crítico suele estar muy desarrollada en el Objetivo.  Recalca la importancia de sacar conclusiones y basar las acciones en hechos.  Busca la precisión y exactitud en todo lo que hace.  Sin embargo, para llevar a cabo con eficiencia su trabajo, el Objetivo suele combinar la información intuitiva con los datos que posee.  Cuando duda sobre el curso a tomar, evita hacer el ridículo preparándose meticulosamente.  Por ejemplo, el Objetivo perfeccionará una nueva habilidad en privado antes de usarla en alguna actividad de grupo. ');
+INSERT INTO `disc_data` VALUES ('objetivo', 'o2', 'O52', 'El Objetivo prefiere trabajar con personas que , como él, prefieren mantener un ambiente laboral tranquilo.  Como puede mostrarse reticente en expresar sus sentimiento, hay quienes lo consideran tímido.  Se siente particularmente incómodo ante personas agresivas.  A pesar de esta apariencia templada, el Objetivo tiene un fuerte necesidad de controlar el ambiente.  Suele ejercer este control en forma indirecta solicitando el apego a reglas y normas.  ');
+INSERT INTO `disc_data` VALUES ('objetivo', 'o3', 'O53', 'El Objetivo se preocupa por llegar a respuestas “correctas” y le puede resultar difícil tomar decisiones en situaciones ambiguas.  Su tendencia a preocuparse le puede llevar a una “parálisis por análisis”.  Con demasiada frecuencia, cuando comete un error, titubea en reconocerlo y se empreña en buscar información que le permita apoyar su postura. ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL PERSUASIVO', '');
 INSERT INTO `disc_data` VALUES ('persuasivo', 'e', 'E6', 'Confía en los demás es entusiasta. ');
 INSERT INTO `disc_data` VALUES ('persuasivo', 'm', 'M6', 'Autoridad y prestigio; diversos símbolos de prestigio. ');
@@ -2517,9 +2518,9 @@ INSERT INTO `disc_data` VALUES ('persuasivo', 'a', 'A6', 'Su entusiasmo; su habi
 INSERT INTO `disc_data` VALUES ('persuasivo', 'b', 'B6', 'Es discreto, diplomático.');
 INSERT INTO `disc_data` VALUES ('persuasivo', 't', 'T6', 'Un ambiente inalterable; relaciones complejas.');
 INSERT INTO `disc_data` VALUES ('persuasivo', 'se', 'SE6', 'Se le asignaran tareas que le impliquen un reto; prestara más atención al servicio y detalles elementales clave para el trabajo; hiciera un análisis objetivo de la información. ');
-INSERT INTO `disc_data` VALUES ('persuasivo', 'o1', 'O61', 'El persuasivo trabaja con y a través de otros.  Esto es, se esfuerza por hacer negocios en forma amistosa al mismo tiempo que pugna por alcanzar sus propios objetivos.  El Persuasivo, al ser franco por naturaleza y mostrar interés por las personas, se gan');
-INSERT INTO `disc_data` VALUES ('persuasivo', 'o2', 'O62', 'El trabajo con gente, las tareas que le suponen  un reto y la variedad de trabajos y actividades que impliquen movilidad , proporcionan un ambiente favorable para el Persuasivo.  Además, suele buscar tareas laborales que le proporcionen oportunidades de q');
-INSERT INTO `disc_data` VALUES ('persuasivo', 'o3', 'O63', 'Al mismo tiempo que rechaza las rutinas y reglamentos, el Persuasivo necesita que se le proporcione información analítica de manera sistemática y periódica.  Cuando se le hace ver la importancia de los “pequeños detalles”, la información adecuada les ayud');
+INSERT INTO `disc_data` VALUES ('persuasivo', 'o1', 'O61', 'El persuasivo trabaja con y a través de otros.  Esto es, se esfuerza por hacer negocios en forma amistosa al mismo tiempo que pugna por alcanzar sus propios objetivos.  El Persuasivo, al ser franco por naturaleza y mostrar interés por las personas, se gana el respeto y confianza de diversos tipos de personas.   El Persuasivo tiene la capacidad de convencer a los demás de su punto de vista, no sólo los conquista, también los retiene como clientes o amigos.  Esta habilidad les es particularmente útil para obtener puestos de autoridad al venderse a sí mismos y sus ideas. ');
+INSERT INTO `disc_data` VALUES ('persuasivo', 'o2', 'O62', 'El trabajo con gente, las tareas que le suponen  un reto y la variedad de trabajos y actividades que impliquen movilidad , proporcionan un ambiente favorable para el Persuasivo.  Además, suele buscar tareas laborales que le proporcionen oportunidades de quedar bien.  Como resultado de su entusiasmo natural, el persuasivo tiende a ser demasiado optimista respecto a los resultados de los proyectos y el potencial de otras personas.  El Persuasivo también suele sobreestimar su capacidad de cambiar el comportamiento de los demás. ');
+INSERT INTO `disc_data` VALUES ('persuasivo', 'o3', 'O63', 'Al mismo tiempo que rechaza las rutinas y reglamentos, el Persuasivo necesita que se le proporcione información analítica de manera sistemática y periódica.  Cuando se le hace ver la importancia de los “pequeños detalles”, la información adecuada les ayuda a equilibrar su entusiasmo con una evaluación realista de la situación.  ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL PROMOTOR', '');
 INSERT INTO `disc_data` VALUES ('promotor', 'e', 'E7', 'Dispuesto a aceptar a los demás.');
 INSERT INTO `disc_data` VALUES ('promotor', 'm', 'M7', 'Aprobación, popularidad. ');
@@ -2530,9 +2531,9 @@ INSERT INTO `disc_data` VALUES ('promotor', 'a', 'A7', 'Los elogios, optimismo. 
 INSERT INTO `disc_data` VALUES ('promotor', 'b', 'B7', 'Descuidado y sentimental; actúa en forma desorganizada; no sabe cómo llevar a cabo las cosas.');
 INSERT INTO `disc_data` VALUES ('promotor', 't', 'T7', 'Perder aceptación social y su autoestima.');
 INSERT INTO `disc_data` VALUES ('promotor', 'se', 'SE7', 'Tuviera más control del tiempo; fuera más objetivo; fuera más sensible a lo que significa “urgente”, controlara sus emociones; cumpliera hasta el final sus promesas, tareas. ');
-INSERT INTO `disc_data` VALUES ('promotor', 'o1', 'O71', 'El promotor cuenta con una extensa red de contactos que le proporciona una base activa para realizar sus negocios.  Gregario y sociable, le es fácil hacer amigos.  Rara vez se opone intencionalmente a alguien.  El promotor busca ambientes socialmente favo');
-INSERT INTO `disc_data` VALUES ('promotor', 'o2', 'O72', 'En vista de que el promotor prefiere por naturaleza la interacción con otros y participa en actividades que implican contacto con gente, se interesa menos en la realización del trabajo.  Aunque su trabajo imponga actividades solitarias, seguirá buscando s');
-INSERT INTO `disc_data` VALUES ('promotor', 'o3', 'O73', 'Por su optimismo natural, el Promotor tiende a sobreestimar la capacidad de los demás.  Suele llegar a conclusiones favorables sin haber considerado todos los hechos.  Con entrenamiento y dirección adecuados se puede ayudar al Promotor a desarrollar objet');
+INSERT INTO `disc_data` VALUES ('promotor', 'o1', 'O71', 'El promotor cuenta con una extensa red de contactos que le proporciona una base activa para realizar sus negocios.  Gregario y sociable, le es fácil hacer amigos.  Rara vez se opone intencionalmente a alguien.  El promotor busca ambientes socialmente favorables donde pueda continuar desarrollando y conservando sus contactos.  Con su excelente capacidad de palabra, promueve muy bien sus propias ideas y genera entusiasmo hacia proyectos ajenos.  Gracias  a su amplia esfera de contactos, el Promotor tiene acceso a las personas apropiadas cuando necesita ayuda. ');
+INSERT INTO `disc_data` VALUES ('promotor', 'o2', 'O72', 'En vista de que el promotor prefiere por naturaleza la interacción con otros y participa en actividades que implican contacto con gente, se interesa menos en la realización del trabajo.  Aunque su trabajo imponga actividades solitarias, seguirá buscando situaciones que impliquen reuniones y vida social activa.  Le agrada participar en reuniones, comités y conferencias. ');
+INSERT INTO `disc_data` VALUES ('promotor', 'o3', 'O73', 'Por su optimismo natural, el Promotor tiende a sobreestimar la capacidad de los demás.  Suele llegar a conclusiones favorables sin haber considerado todos los hechos.  Con entrenamiento y dirección adecuados se puede ayudar al Promotor a desarrollar objetividad y a dar la importancia debida a los resultados.  Planear y controlar el tiempo le puede significar un reto.  Le conviene limitar el tiempo dedicado a conversar y de esta manera recordarse a sí mismo la urgencia de “concluir” y llevar a término una tarea.  ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL CONSEJERO', '');
 INSERT INTO `disc_data` VALUES ('consejero', 'e', 'E8', 'Es fácil de abordar, afectuoso y comprensivo. ');
 INSERT INTO `disc_data` VALUES ('consejero', 'm', 'M8', 'La amistad; la felicidad. ');
@@ -2543,9 +2544,9 @@ INSERT INTO `disc_data` VALUES ('consejero', 'a', 'A8', 'Acercamiento indirecto,
 INSERT INTO `disc_data` VALUES ('consejero', 'b', 'B8', 'Se torna demasiado flexible e íntimo; confía demasiado en todos sin distinción. .');
 INSERT INTO `disc_data` VALUES ('consejero', 't', 'T8', 'Presionar a los demás; que se le acuse de hacer daño.');
 INSERT INTO `disc_data` VALUES ('consejero', 'se', 'SE8', 'Presenta más atención a las fechas límite; tuviera más iniciativa para realizar el trabajo.');
-INSERT INTO `disc_data` VALUES ('consejero', 'o1', 'O81', 'El Consejero tiene  el don particular de resolver los problemas de los demás.  Impresiona con su afecto, empatía y comprensión.  Al Consejero le es fácil encontrar lo bueno en las personas y asume una actitud optimista.  El consejero prefiere tratar con l');
-INSERT INTO `disc_data` VALUES ('consejero', 'o2', 'O82', 'El Consejero suele ser en extremo tolerante y paciente con las personas que no rinden en el trabajo.  Bajo presión, se le dificulta confrontar los problemas de desempeño en forma directa.  Suele ser demasiado indirecto para ordenar,  exigir o disciplinar ');
-INSERT INTO `disc_data` VALUES ('consejero', 'o3', 'O83', 'A menudo, el Consejero toma la crítica como una afrenta personal, pero responde en forma positiva si recibe atención y cumplidos por un trabajo bien hecho.  Cuando tiene un puesto de responsabilidad, suele prestar atención a la calidad de las condiciones ');
+INSERT INTO `disc_data` VALUES ('consejero', 'o1', 'O81', 'El Consejero tiene  el don particular de resolver los problemas de los demás.  Impresiona con su afecto, empatía y comprensión.  Al Consejero le es fácil encontrar lo bueno en las personas y asume una actitud optimista.  El consejero prefiere tratar con la gente sobre la base de una relación íntima.  Al saber escuchar, en especial a los problemas, es discreto en sus sugerencias y no trata de imponer sus ideas a los demás. ');
+INSERT INTO `disc_data` VALUES ('consejero', 'o2', 'O82', 'El Consejero suele ser en extremo tolerante y paciente con las personas que no rinden en el trabajo.  Bajo presión, se le dificulta confrontar los problemas de desempeño en forma directa.  Suele ser demasiado indirecto para ordenar,  exigir o disciplinar a otros.  Con su actitud de que la “gente es importante”, el Consejero suele dar menos importancia al rendimiento.  En ocasiones requiere ayuda para fijar y cumplir fechas límites realistas. ');
+INSERT INTO `disc_data` VALUES ('consejero', 'o3', 'O83', 'A menudo, el Consejero toma la crítica como una afrenta personal, pero responde en forma positiva si recibe atención y cumplidos por un trabajo bien hecho.  Cuando tiene un puesto de responsabilidad, suele prestar atención a la calidad de las condiciones de trabajo y proporcionar reconocimiento adecuado a los miembros de su equipo.  ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL AGENTE', '');
 INSERT INTO `disc_data` VALUES ('agente', 'e', 'E9', 'Acepta el afecto; rechaza la agresión. ');
 INSERT INTO `disc_data` VALUES ('agente', 'm', 'M9', 'Ser aceptado por los demás. ');
@@ -2556,9 +2557,9 @@ INSERT INTO `disc_data` VALUES ('agente', 'a', 'A9', 'La amabilidad. ');
 INSERT INTO `disc_data` VALUES ('agente', 'b', 'B9', 'Se vuelve persuasivo haciendo, si fuese necesario, uso de información que posee o de amistades clave.');
 INSERT INTO `disc_data` VALUES ('agente', 't', 'T9', 'El desacuerdo, el conflicto.');
 INSERT INTO `disc_data` VALUES ('agente', 'se', 'SE9', 'Tuviera más conciencia de quién es y de lo que puede hacer;  mostrara más firmeza y agresividad; dijera “no” en los momentos adecuados.');
-INSERT INTO `disc_data` VALUES ('agente', 'o1', 'O91', 'Al Agente le interesa tanto las relaciones humanas como los variados  aspectos del trabajo.   Gracias a su empatía y tolerancia sabe escuchar y se le conoce por su buena disposición.   El Agente hace que los demás sientan que se les quiere y necesita.   N');
-INSERT INTO `disc_data` VALUES ('agente', 'o2', 'O92', 'En cuanto al trabajo, el Agente cuenta con un excelente potencial para la organización y eficiente ejecución.  Es excelente en hacer para otros lo que ellos encuentran difícil de realizar.  El Agente busca por naturaleza la armonía y cooperación en el gru');
-INSERT INTO `disc_data` VALUES ('agente', 'o3', 'O93', 'Sin embargo, el Agente teme el conflicto y desacuerdo.  Su tendencia a ayudar puede instar a otros a tolerar una situación en lugar de buscar una solución del problema.   Además,  la tendencia del Agente a adoptar un perfil “bajo” en lugar de aceptar una ');
+INSERT INTO `disc_data` VALUES ('agente', 'o1', 'O91', 'Al Agente le interesa tanto las relaciones humanas como los variados  aspectos del trabajo.   Gracias a su empatía y tolerancia sabe escuchar y se le conoce por su buena disposición.   El Agente hace que los demás sientan que se les quiere y necesita.   No hay quien tema ser rechazado por un Agente.  Es más, el agente ofrece amistad y está dispuesto a ayudar. ');
+INSERT INTO `disc_data` VALUES ('agente', 'o2', 'O92', 'En cuanto al trabajo, el Agente cuenta con un excelente potencial para la organización y eficiente ejecución.  Es excelente en hacer para otros lo que ellos encuentran difícil de realizar.  El Agente busca por naturaleza la armonía y cooperación en el grupo. ');
+INSERT INTO `disc_data` VALUES ('agente', 'o3', 'O93', 'Sin embargo, el Agente teme el conflicto y desacuerdo.  Su tendencia a ayudar puede instar a otros a tolerar una situación en lugar de buscar una solución del problema.   Además,  la tendencia del Agente a adoptar un perfil “bajo” en lugar de aceptar una confrontación franca con personas agresivas, lo que puede ser visto como una falta de “dureza”.   A pesar de todo, el Agente cuenta con un buen nivel de independencia aunque le preocupa su integración en el grupo.  ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL EVALUADOR ', '');
 INSERT INTO `disc_data` VALUES ('evaluador', 'e', 'E10', 'Un fuerte impulso por causar buena impresión. ');
 INSERT INTO `disc_data` VALUES ('evaluador', 'm', 'M10', '“Ganar” con estilo. ');
@@ -2569,9 +2570,9 @@ INSERT INTO `disc_data` VALUES ('evaluador', 'a', 'A10', 'Su autoridad e ingenio
 INSERT INTO `disc_data` VALUES ('evaluador', 'b', 'B10', 'Se torna intranquilo; crítico;  impaciente.');
 INSERT INTO `disc_data` VALUES ('evaluador', 't', 'T10', '“Perder”; quedar mal ante los demás.');
 INSERT INTO `disc_data` VALUES ('evaluador', 'se', 'SE10', 'Llevara a cabo el seguimiento hasta el final; mostrara empatía al estar en desacuerdo; se marcara un ritmo más realista para sus actividades. ');
-INSERT INTO `disc_data` VALUES ('evaluador', 'o1', 'O101', 'El  Evaluador toma las ideas creativas y las utiliza para fines prácticos.   Es competitivo y usa métodos directos para conseguir resultados.   Sin embargo, hay quienes consideran al Evaluador menos agresivo ya que suele mostrar consideración hacia los de');
-INSERT INTO `disc_data` VALUES ('evaluador', 'o2', 'O102', 'El Evaluador suele ser capaz de ayudar a los demás a visualizar los pasos necesarios para lograr resultados.  Por lo general, habla de un plan de acción detallado que él mismo desarrollará  para asegurar una progresión ordenada hacia los resultados.  Sin ');
-INSERT INTO `disc_data` VALUES ('evaluador', 'o3', 'O103', 'El Evaluador tiene un pensamiento bastante analítico y es hábil para expresar en palabras sus críticas.   Sus palabras pueden ser bastante hirientes.   El Evaluador controla mejor la situación si se relaja y disminuye su ritmo de trabajo.  Un axioma que l');
+INSERT INTO `disc_data` VALUES ('evaluador', 'o1', 'O101', 'El  Evaluador toma las ideas creativas y las utiliza para fines prácticos.   Es competitivo y usa métodos directos para conseguir resultados.   Sin embargo, hay quienes consideran al Evaluador menos agresivo ya que suele mostrar consideración hacia los demás.   En lugar de ordenar o mandar, el Evaluador involucra a las personas en el trabajo usando métodos persuasivos.  Obtiene la cooperación de quienes le rodean al explicar la lógica de las actividades propuestas. ');
+INSERT INTO `disc_data` VALUES ('evaluador', 'o2', 'O102', 'El Evaluador suele ser capaz de ayudar a los demás a visualizar los pasos necesarios para lograr resultados.  Por lo general, habla de un plan de acción detallado que él mismo desarrollará  para asegurar una progresión ordenada hacia los resultados.  Sin embargo, en su afán de ganar, el Evaluador se puede impacientar cuando no se mantiene a los niveles establecidos o cuando se requiere mucho seguimiento.  ');
+INSERT INTO `disc_data` VALUES ('evaluador', 'o3', 'O103', 'El Evaluador tiene un pensamiento bastante analítico y es hábil para expresar en palabras sus críticas.   Sus palabras pueden ser bastante hirientes.   El Evaluador controla mejor la situación si se relaja y disminuye su ritmo de trabajo.  Un axioma que le sería útil para lograrlo es:  “algunas veces se gana y otras se pierde”.   ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL RESOLUTIVO  ', '');
 INSERT INTO `disc_data` VALUES ('resolutivo', 'e', 'E11', 'Individualista en lo que se refiere a sus necesidades personales.  ');
 INSERT INTO `disc_data` VALUES ('resolutivo', 'm', 'M11', 'Una nueva oportunidad; un nuevo reto.  ');
@@ -2582,9 +2583,9 @@ INSERT INTO `disc_data` VALUES ('resolutivo', 'a', 'A11', 'Del control que ejerc
 INSERT INTO `disc_data` VALUES ('resolutivo', 'b', 'B11', 'Se aparta cuando se tienen que hacer las cosas; se torna beligerante cuando ve su individualidad amenazada o se le cierran las puertas al reto.');
 INSERT INTO `disc_data` VALUES ('resolutivo', 't', 'T11', 'Al aburrimiento;  a la pérdida del control. ');
 INSERT INTO `disc_data` VALUES ('resolutivo', 'se', 'SE11', 'Mostrara más paciencia, empatía;  participara y colaborara con los demás;  diera más seguimiento y atención a la importancia del control de calidad. ');
-INSERT INTO `disc_data` VALUES ('resolutivo', 'o1', 'O111', 'El Resolutivo suele ser una persona fuertemente individualista que busca continuamente nuevos horizontes.  Como es extremadamente autosuficiente e independiente de pensamiento y acción, prefiere encontrar sus propias soluciones.   Relativamente libre de l');
-INSERT INTO `disc_data` VALUES ('resolutivo', 'o2', 'O112', 'Aunque con bastante frecuencia tiende a ser directo y enérgico, el Resolutivo es asimismo astuto para manipular personas y situaciones.  Sin embargo, cuando se requiere que el Resolutivo coopere con otros en situaciones que limitan su individualidad, el R');
-INSERT INTO `disc_data` VALUES ('resolutivo', 'o3', 'O113', 'Al Resolutivo le interesa mucho alcanzar sus propias metas, así como tener oportunidades de progreso y retos.   Como su empeño se enfoca tanto en el resultado final, suele carecer de empatía y parecer indiferente a las personas.  Podría decir algo como:  ');
+INSERT INTO `disc_data` VALUES ('resolutivo', 'o1', 'O111', 'El Resolutivo suele ser una persona fuertemente individualista que busca continuamente nuevos horizontes.  Como es extremadamente autosuficiente e independiente de pensamiento y acción, prefiere encontrar sus propias soluciones.   Relativamente libre de la influencia restrictiva del grupo, el Resolutivo es capaz de eludir los convencionalismos y suele aportar soluciones innovadoras. ');
+INSERT INTO `disc_data` VALUES ('resolutivo', 'o2', 'O112', 'Aunque con bastante frecuencia tiende a ser directo y enérgico, el Resolutivo es asimismo astuto para manipular personas y situaciones.  Sin embargo, cuando se requiere que el Resolutivo coopere con otros en situaciones que limitan su individualidad, el Resolutivo pude tornarse beligerante.  Es sumamente persistente para conseguir los resultados que desea, y hace todo lo que está en sus manos para vencer los obstáculos que se le presentan.  Además, sus expectativas respecto a los demás son altas y puede ser muy crítico cuando no se cumplen sus normas. ');
+INSERT INTO `disc_data` VALUES ('resolutivo', 'o3', 'O113', 'Al Resolutivo le interesa mucho alcanzar sus propias metas, así como tener oportunidades de progreso y retos.   Como su empeño se enfoca tanto en el resultado final, suele carecer de empatía y parecer indiferente a las personas.  Podría decir algo como:  “tómate una aspirina, yo estoy igual” o “no seas niño, ya se te pasará”.   ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DE PROFESIONAL  ', '');
 INSERT INTO `disc_data` VALUES ('profesional', 'e', 'E12', 'Quiere mantenerse a la altura de los demás en cuanto a esfuerzo y desempeño técnico. ');
 INSERT INTO `disc_data` VALUES ('profesional', 'm', 'M12', 'Profundo afán por el desarrollo personal. ');
@@ -2595,9 +2596,9 @@ INSERT INTO `disc_data` VALUES ('profesional', 'a', 'A12', 'Una atención excesi
 INSERT INTO `disc_data` VALUES ('profesional', 'b', 'B12', 'Se cohibe; sensible a la crítica.');
 INSERT INTO `disc_data` VALUES ('profesional', 't', 'T12', 'Ser demasiado predecible;  que no se le reconozca como “experto”.');
 INSERT INTO `disc_data` VALUES ('profesional', 'se', 'SE12', 'Colaborara en forma genuina para beneficio general; delegara tareas importantes a las personas apropiadas.');
-INSERT INTO `disc_data` VALUES ('profesional', 'o1', 'O121', 'El profesional valora la destreza en áreas especializadas.  Su enorme deseo de “destacar en algo”, lo lleva a un esmerado control de su propio desempeño en el trabajo.  Aunque su meta es ser “el” experto en un área determinada, el Profesional da la impres');
-INSERT INTO `disc_data` VALUES ('profesional', 'o2', 'O122', 'En su relación con otros, el Profesional suele proyectar un estilo relajado, diplomático y afable.  Esta actitud puede cambiar de súbito en su área de especialización cuando se concentra demasiado en alcanzar altos niveles de rendimiento.  Al valorar la a');
-INSERT INTO `disc_data` VALUES ('profesional', 'o3', 'O123', 'Al mismo tiempo que su naturaleza le pide concentrarse en desarrollar una propuesta organizada del trabajo y en aumentar sus propias capacidades,   El Profesional necesita asimismo ayudar a otros a perfeccionar sus talentos.  Además, necesita saber apreci');
+INSERT INTO `disc_data` VALUES ('profesional', 'o1', 'O121', 'El profesional valora la destreza en áreas especializadas.  Su enorme deseo de “destacar en algo”, lo lleva a un esmerado control de su propio desempeño en el trabajo.  Aunque su meta es ser “el” experto en un área determinada, el Profesional da la impresión de saber un poco de todo.  Esta imagen es más marcada cuando pone en palabras el conocimiento que posee sobre diversos temas. ');
+INSERT INTO `disc_data` VALUES ('profesional', 'o2', 'O122', 'En su relación con otros, el Profesional suele proyectar un estilo relajado, diplomático y afable.  Esta actitud puede cambiar de súbito en su área de especialización cuando se concentra demasiado en alcanzar altos niveles de rendimiento.  Al valorar la autodisciplina, el Profesional evalúa a los demás sobre la base de su autodisciplina, la que mide por su rendimiento diario.  Sus expectativas en relación consigo mismo y con los demás son elevadas.  Suele exteriorizar su desilusión. ');
+INSERT INTO `disc_data` VALUES ('profesional', 'o3', 'O123', 'Al mismo tiempo que su naturaleza le pide concentrarse en desarrollar una propuesta organizada del trabajo y en aumentar sus propias capacidades,   El Profesional necesita asimismo ayudar a otros a perfeccionar sus talentos.  Además, necesita saber apreciar mejor a quienes contribuyen en el esfuerzo del trabajo, aunque no usen lo que el Profesional considera el “método correcto”.');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL INVESTIGADOR   ', '');
 INSERT INTO `disc_data` VALUES ('investigador', 'e', 'E13', 'Desapasionado; autodisciplinado. ');
 INSERT INTO `disc_data` VALUES ('investigador', 'm', 'M13', 'El poder que generan la autoridad, la posición y los roles formales. ');
@@ -2608,9 +2609,9 @@ INSERT INTO `disc_data` VALUES ('investigador', 'a', 'A13', 'La franqueza; su de
 INSERT INTO `disc_data` VALUES ('investigador', 'b', 'B13', 'Tiende a interiorizar los conflictos; recuerda el mal que se le ha hecho.');
 INSERT INTO `disc_data` VALUES ('investigador', 't', 'T13', 'Involucrarse con las masas; vender ideas abstractas.');
 INSERT INTO `disc_data` VALUES ('investigador', 'se', 'SE13', 'Fuera más flexible; aceptara a los demás; si participara más con los demás.');
-INSERT INTO `disc_data` VALUES ('investigador', 'o1', 'O131', 'Objetivo y analítico, el investigador, está “enclavado en la realidad”.  Por lo general reservado, sigue con calma y firmeza un camino independiente hacia la meta establecida.  El Investigador tiene éxito en muchas cosas, no por su versatilidad sino por l');
-INSERT INTO `disc_data` VALUES ('investigador', 'o2', 'O132', 'El investigador se desempeña de maravilla en tareas de naturaleza técnica que le impliquen un reto, donde pueda usar e interpretar información real y sacar conclusiones.  Responde a la lógica más que a la emoción.  Al vender o comercializar una idea, pued');
-INSERT INTO `disc_data` VALUES ('investigador', 'o3', 'O133', 'El Investigador prefiere trabajar solo y no se interesa en agradar a los demás.   Se le puede considerar sumamente directo, brusco y sin tacto.  Al valorar su propia capacidad de pensamiento, el Investigador evalúa a los demás por su objetividad y lógica.');
+INSERT INTO `disc_data` VALUES ('investigador', 'o1', 'O131', 'Objetivo y analítico, el investigador, está “enclavado en la realidad”.  Por lo general reservado, sigue con calma y firmeza un camino independiente hacia la meta establecida.  El Investigador tiene éxito en muchas cosas, no por su versatilidad sino por la tenaz determinación de llegar hasta el final.   Busca un claro propósito o meta sobre el que puede desarrollar un plan ordenado y organizar sus acciones.   Una vez embarcado en un proyecto, el Investigador lucha con tenacidad por alcanzar sus objetivos.  En ocasiones es necesario intervenir para que cambie de parecer.  Puede ser visto  por otros como terco y obstinado. ');
+INSERT INTO `disc_data` VALUES ('investigador', 'o2', 'O132', 'El investigador se desempeña de maravilla en tareas de naturaleza técnica que le impliquen un reto, donde pueda usar e interpretar información real y sacar conclusiones.  Responde a la lógica más que a la emoción.  Al vender o comercializar una idea, puede lograr gran éxito si su producto es concreto.  ');
+INSERT INTO `disc_data` VALUES ('investigador', 'o3', 'O133', 'El Investigador prefiere trabajar solo y no se interesa en agradar a los demás.   Se le puede considerar sumamente directo, brusco y sin tacto.  Al valorar su propia capacidad de pensamiento, el Investigador evalúa a los demás por su objetividad y lógica.  Para mejorar la efectividad de sus relaciones con las personas necesita desarrollar una mayor comprensión de los demás, incluso de sus emociones. ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL ORIENTADO A RESULTADOS ', '');
 INSERT INTO `disc_data` VALUES ('orientado a resultados', 'e', 'E14', 'Una gran expresión verbal de la fuerza del ego; muestra un fuerte individualismo. . ');
 INSERT INTO `disc_data` VALUES ('orientado a resultados', 'm', 'M14', 'Dominio e independencia. . ');
@@ -2621,9 +2622,9 @@ INSERT INTO `disc_data` VALUES ('orientado a resultados', 'a', 'A14', 'La impaci
 INSERT INTO `disc_data` VALUES ('orientado a resultados', 'b', 'B14', 'Se vuelve criticón y se dedica a encontrar errores;  se niega a trabajar en equipo; se excede en sus prerrogativas.');
 INSERT INTO `disc_data` VALUES ('orientado a resultados', 't', 'T14', 'Que otros se aprovechen de él; la lentitud, en especial en las actividades del trabajo; ser demasiado “blando” o “íntimo” con los demás.');
 INSERT INTO `disc_data` VALUES ('orientado a resultados', 'se', 'SE14', 'Verbalizara su proceso de razonamiento; buscara otros puntos de vista e ideas sobre sus objetivos al resolver problemas; su preocupación por los demás fuera más genuina; fuera más paciente y humilde.');
-INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o1', 'O141', 'El Orientado a Resultados muestra tal confianza en sí mismo que algunos lo interpretan como arrogancia.  Busca sin descanso oportunidades que prueben y desarrollen sus capacidades para alcanzar resultados.  A estas personas les gustan las tareas difíciles');
-INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o2', 'O142', 'El Orientado a Resultados tiende a evitar factores que lo restrinjan, como controles directos, detalles que le consuman tiempo y trabajos rutinarios.  Enérgico y directo, este individuo puede tener dificultades con los demás.  Por ser tan independiente, e');
-INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o3', 'O143', 'El Orientado a Resultados es rápido de pensamiento y acción.  Se impacienta con quienes son diferentes a él y los critica.  Valora a aquellos que muestran destreza para obtener resultados.  Son determinados y persistentes, incluso frente al antagonismo.  ');
+INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o1', 'O141', 'El Orientado a Resultados muestra tal confianza en sí mismo que algunos lo interpretan como arrogancia.  Busca sin descanso oportunidades que prueben y desarrollen sus capacidades para alcanzar resultados.  A estas personas les gustan las tareas difíciles, situaciones competitivas, cometidos únicos y puestos “importantes”.  Aceptan la responsabilidad con un aire de “yo lo hago” y,  cuando terminan, de “dije que yo lo podía hacer”. ');
+INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o2', 'O142', 'El Orientado a Resultados tiende a evitar factores que lo restrinjan, como controles directos, detalles que le consuman tiempo y trabajos rutinarios.  Enérgico y directo, este individuo puede tener dificultades con los demás.  Por ser tan independiente, el Orientado a Resultados puede impacientarse cuando se ve involucrado en actividades de grupo.  Aunque por lo general prefiere trabajar solo, logra persuadir a otros para que apoyen sus esfuerzos, en especial para completar actividades de rutina. ');
+INSERT INTO `disc_data` VALUES ('orientado a resultados', 'o3', 'O143', 'El Orientado a Resultados es rápido de pensamiento y acción.  Se impacienta con quienes son diferentes a él y los critica.  Valora a aquellos que muestran destreza para obtener resultados.  Son determinados y persistentes, incluso frente al antagonismo.  Estas personas, si creen que es necesario, toman el mando de la situación, les corresponda o no.  En su impulso tenaz en busca de resultados, pueden parecer ásperos y desatentos.  ');
 INSERT INTO `disc_data` VALUES ('', '', 'PATRON DEL ESPECIALISTA ', '');
 INSERT INTO `disc_data` VALUES ('especialista', 'e', 'E15', 'Moderación calculada; afán de servir, de adaptarse a los demás. ');
 INSERT INTO `disc_data` VALUES ('especialista', 'm', 'M15', 'Conservar el “status quo”, controlar el ambiente. ');
@@ -2634,6 +2635,215 @@ INSERT INTO `disc_data` VALUES ('especialista', 'a', 'A15', 'La modestia; su mie
 INSERT INTO `disc_data` VALUES ('especialista', 'b', 'B15', 'Se adapta a quienes tienen autoridad y a lo que opina el grupo.');
 INSERT INTO `disc_data` VALUES ('especialista', 't', 'T15', 'Los cambios; la desorganización.');
 INSERT INTO `disc_data` VALUES ('especialista', 'se', 'SE15', 'Compartiera más sus ideas; aumentara su confianza en sí mismo basándose en la retroalimentación que recibe; utilizara métodos más sencillos y directos.');
-INSERT INTO `disc_data` VALUES ('especialista', 'o1', 'O151', 'El Especialista se “lleva bien” con los demás.  Por su actitud moderada y controlada y por su comportamiento modesto, puede trabajar en armonía con diversos estilos de conducta.  El Especialista es considerado paciente y siempre está dispuesto a ayudar a ');
-INSERT INTO `disc_data` VALUES ('especialista', 'o2', 'O152', 'Se esfuerza por conservar pautas de comportamiento conocidos y predecibles.  El Especialista, al ser bastante eficiente en áreas especializadas, planea su trabajo, lo enfoca de manera clara y directa y consigue una notoria constancia en su desempeño.  El ');
-INSERT INTO `disc_data` VALUES ('especialista', 'o3', 'O153', 'El Especialista es lento para adaptarse a los cambios.  Una preparación previa le concede el tiempo que requiere para cambiar sus procedimientos y conservar su nivel de rendimiento.  El Especialista puede necesitar ayuda al inicio de un nuevo proyecto y p');
+INSERT INTO `disc_data` VALUES ('especialista', 'o1', 'O151', 'El Especialista se “lleva bien” con los demás.  Por su actitud moderada y controlada y por su comportamiento modesto, puede trabajar en armonía con diversos estilos de conducta.  El Especialista es considerado paciente y siempre está dispuesto a ayudar a quienes considera sus amigos.  De hecho, tiende a desarrollar en el trabajo una estrecha relación con un grupo relativamente reducido de compañeros. ');
+INSERT INTO `disc_data` VALUES ('especialista', 'o2', 'O152', 'Se esfuerza por conservar pautas de comportamiento conocidos y predecibles.  El Especialista, al ser bastante eficiente en áreas especializadas, planea su trabajo, lo enfoca de manera clara y directa y consigue una notoria constancia en su desempeño.  El reconocimiento que recibe de los demás le ayuda a conservar este nivel. ');
+INSERT INTO `disc_data` VALUES ('especialista', 'o3', 'O153', 'El Especialista es lento para adaptarse a los cambios.  Una preparación previa le concede el tiempo que requiere para cambiar sus procedimientos y conservar su nivel de rendimiento.  El Especialista puede necesitar ayuda al inicio de un nuevo proyecto y para desarrollar métodos prácticos y sencillos para cubrir plazos establecidos.  Suele dejar a un lado los proyectos terminados para posteriormente concluirlos.  Un pequeño consejo: ¡tire algunas de esas carpetas viejas de su archivo!.   ');
+
+-- ----------------------------
+-- Table structure for disc_data-2
+-- ----------------------------
+DROP TABLE IF EXISTS `disc_data-2`;
+CREATE TABLE `disc_data-2` (
+  `perfil` text,
+  `bloque` text,
+  `patron` text,
+  `descripcion` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of disc_data-2
+-- ----------------------------
+INSERT INTO `disc_data-2` VALUES ('alentador', 'e', 'E1', 'Acepta la agresión, tiende a aparentar dar poca importancia a la necesidad que tiene de afecto.');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'm', 'M1', 'Controlar su ambiente o a su público.');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'j', 'J1', 'La forma en que proyecta su fuerza personal, carácter  y posición social. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'i', 'I1', 'Su encanto, dirección, intimidación , uso de recompensas. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 's', 'S1', 'Mueve a la gente, inicia, ordena, felicita disciplina.');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'a', 'A1', 'Su enfoque de que “el fin justifica los medios”. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'b', 'B1', 'Se vuelve manipulador, pendenciero, beligerante. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 't', 'T1', 'Ser demasiado blando, perder su posición social. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'se', 'SE1', 'Fuera más genuina su sensibilidad; estuviera más dispuesto a ayudar a otros a tener éxito en su propio desarrollo personal. ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'o1', 'O11', 'Las personas con patrón alentador saben con exactitud los resultados que quieren, pero no siempre los verbalizan de inmediato.  Manifiestan cuáles son los resultados que quieren sólo después de que se haya creado un ambiente apropiado y la otra persona es');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'o2', 'O12', 'El alentador pude ser encantador en su trato con los demás.  Es persuasivo para obtener ayuda cuando se le presentan detalles repetitivos y que consumen mucho tiempo.  Sin embargo, las personas a menudo experimentan ante ellos una sensación de conflicto, ');
+INSERT INTO `disc_data-2` VALUES ('alentador', 'o3', 'O13', '');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL REALIZADOR', '');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'e', 'E2', 'Activo, diligente, muestra frustración..');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'm', 'M2', 'Logros personales, en ocasiones a expensas de la meta de grupo. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'j', 'J2', 'El logro de resultados concretos. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'i', 'I2', 'La aceptación de responsabilidad por su propio trabajo. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 's', 'S2', 'Se propone y consigue resultados en áreas clave. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'a', 'A2', 'Confianza en si mismo, absorción en el trabajo. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'b', 'B2', 'Se frustra e impacienta con los demás, se convierte en una persona que “lo hace todo”  en vez de ser alguien que delega.');
+INSERT INTO `disc_data-2` VALUES ('realizador', 't', 'T2', 'A quienes tienen niveles inferiores o competitivos de trabajo, que afectan los resultados. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'se', 'SE2', 'Dejara de pensar en “esto o lo otro”, estableciera su prioridades con mayor claridad y aceptara enfoques alternativos, estuviera dispuesto a sacrificar los beneficios a corto plazo por otros a largo plazo. ');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'o1', 'O21', 'La motivación del Patrón Realizador surge en gran parte de su interior y de metas personales muy profundas.  Este compromiso previo con sus propias metas impide que acepte automáticamente las metas del grupo.  El Realizador necesita combinar sus metas per');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'o2', 'O22', 'El Realizador demuestra un profundo interés por su trabajo y un continuo e intenso afán por conseguir lo que se propone.   Tiene una alta opinión de su trabajo y suele realizar las cosas por él mismo para asegurarse de que todo esté bien hecho.  Valora el');
+INSERT INTO `disc_data-2` VALUES ('realizador', 'o3', 'O23', 'Si el Realizador se comunica más con los demás dejaría de pensar en “esto o lo otro”, del “yo mismo lo tengo que hacer” o “quiero todo el crédito para mí”.  Tal vez necesite ayuda para considerar otras propuestas y conseguir los resultados que desea.  El ');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL PERFECCIONISTA', '');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'e', 'E3', 'Competente para hacer bien las cosas, reservado, cauteloso.');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'm', 'M3', 'Logros estables, predecible.');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'j', 'J3', 'Normas precisas.');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'i', 'I3', 'La atención al detalle y precisión. ');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 's', 'S3', 'Concienzudo, conserva las normas, control de calidad. ');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'a', 'A3', 'Los procedimientos y controles excesivos para evitar las fallas, depende demasiado de la gente, productos y procesos que le funcionaron en el pasado. ');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'b', 'B3', 'Es discreto, diplomático. ');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 't', 'T3', 'El antagonismo.');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'se', 'SE3', 'Fuera más flexible en su papel, fuera más independiente e interdependiente, tuviera más fe en sí mismo y si se viera a sí mismo como una persona valiosa.');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'o1', 'O31', 'El Perfeccionista es metódico y preciso en su forma de pensar y trabajar, por lo que suele seguir procedimientos ordenados tanto en su vida personal como laboral.   Es extremadamente concienzudo y se esmera en el trabajo detallado y preciso.   El Perfecci');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'o2', 'O32', 'El perfeccionista se puede empantanar en los detalles cuando tiene que tomar decisiones.  Sabe tomar decisiones importantes, pero se le puede criticar por el tiempo que le toma reunir y analizar la información antes de decidir.  Aunque le agrada conocer l');
+INSERT INTO `disc_data-2` VALUES ('perfeccionista', 'o3', 'O33', 'El Perfeccionista se evalúa y evalúa a los demás bajo normas precisas que aseguren resultados concretos y se adhiere a procedimientos operativos normales. Para la organización es valiosa esta atención concienzuda a las normas y calidad, sin embargo, el Pe');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL CREATIVO', '');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'e', 'E4', 'Acepta la agresión, puede contenerse al expresarse. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'm', 'M4', 'Dominar, logros únicos. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'j', 'J4', 'Sus propias normas, las ideas progresivas al llevar a cabo el trabajo. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'i', 'I4', 'El establecimiento de un ritmo a seguir para desarrollar sistemas y enfoques innovadores. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 's', 'S4', 'El iniciar o diseñar cambios. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'a', 'A4', 'La brusquedad, la actitud crítica o condescendiente. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'b', 'B4', 'Se aburre fácilmente con el trabajo rutinario, cuando se le restringe se torna malhumorado, es independiente. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 't', 'T4', 'No poder influir, no alcanzar el nivel establecido. ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'se', 'SE4', 'Fuera más amable, usara más tacto al comunicarse, cooperara más con el equipo, reconociera que existen sanciones.');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'o1', 'O41', 'Las personas con un Patrón Creativo muestran dos fuerzas opuestas en su comportamiento.   El deseo de resultados tangibles se contrapone a un impulso de igual magnitud por la perfección.  Su agresividad se templa con su sensibilidad.  La rapidez de pensam');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'o2', 'O42', 'Las personas creativas preveen de manera extraordinaria el enfoque que hay que dar a un proyecto y efectúan los cambios oportunos.  En vista de que las personas con un Patrón Creativo son perfeccionistas y cuentan con una gran habilidad para planear, los ');
+INSERT INTO `disc_data-2` VALUES ('creativo', 'o3', 'O43', 'La persona creativa desea libertad para explorar y la autoridad para examinar y verificar los resultados.  Puede tomar las decisiones diarias con rapidez,  pero puede ser extremadamente cauteloso al tomar decisiones de verdadera importancia.  “¿Debería ac');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL OBJETIVO', '');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'e', 'E5', 'Puede rechazar la agresión interpersonal. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'm', 'M5', 'La exactitud. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'j', 'J5', 'Su capacidad de pensamiento analítico. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'i', 'I5', 'La información objetiva, los argumentos lógicos. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 's', 'S5', 'Define,  esclarece, obtiene información, evalúa, comprueba. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'a', 'A5', 'El análisis. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'b', 'B5', 'Se vuelve aprensivo.');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 't', 'T5', 'Actos irracionales, el ridículo.');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'se', 'SE5', 'Fuera más abierto, compartiera en público su perspicacia y opiniones. ');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'o1', 'O51', 'La capacidad de pensamiento crítico suele estar muy desarrollada en el Objetivo.  Recalca la importancia de sacar conclusiones y basar las acciones en hechos.  Busca la precisión y exactitud en todo lo que hace.  Sin embargo, para llevar a cabo con eficie');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'o2', 'O52', 'El Objetivo prefiere trabajar con personas que , como él, prefieren mantener un ambiente laboral tranquilo.  Como puede mostrarse reticente en expresar sus sentimiento, hay quienes lo consideran tímido.  Se siente particularmente incómodo ante personas ag');
+INSERT INTO `disc_data-2` VALUES ('objetivo', 'o3', 'O53', 'El Objetivo se preocupa por llegar a respuestas “correctas” y le puede resultar difícil tomar decisiones en situaciones ambiguas.  Su tendencia a preocuparse le puede llevar a una “parálisis por análisis”.  Con demasiada frecuencia, cuando comete un error');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL PERSUASIVO', '');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'e', 'E6', 'Confía en los demás es entusiasta. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'm', 'M6', 'Autoridad y prestigio; diversos símbolos de prestigio. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'j', 'J6', 'Su capacidad de expresión verbal; su flexibilidad. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'i', 'I6', 'Un comportamiento amistoso; franqueza; habilidad en su expresión verbal. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 's', 'S6', 'Sabe vender y cerrar tratos; delega responsabilidades; sereno, seguridad en sí mismo. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'a', 'A6', 'Su entusiasmo; su habilidad para vender; su optimismo. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'b', 'B6', 'Es discreto, diplomático.');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 't', 'T6', 'Un ambiente inalterable; relaciones complejas.');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'se', 'SE6', 'Se le asignaran tareas que le impliquen un reto; prestara más atención al servicio y detalles elementales clave para el trabajo; hiciera un análisis objetivo de la información. ');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'o1', 'O61', 'El persuasivo trabaja con y a través de otros.  Esto es, se esfuerza por hacer negocios en forma amistosa al mismo tiempo que pugna por alcanzar sus propios objetivos.  El Persuasivo, al ser franco por naturaleza y mostrar interés por las personas, se gan');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'o2', 'O62', 'El trabajo con gente, las tareas que le suponen  un reto y la variedad de trabajos y actividades que impliquen movilidad , proporcionan un ambiente favorable para el Persuasivo.  Además, suele buscar tareas laborales que le proporcionen oportunidades de q');
+INSERT INTO `disc_data-2` VALUES ('persuasivo', 'o3', 'O63', 'Al mismo tiempo que rechaza las rutinas y reglamentos, el Persuasivo necesita que se le proporcione información analítica de manera sistemática y periódica.  Cuando se le hace ver la importancia de los “pequeños detalles”, la información adecuada les ayud');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL PROMOTOR', '');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'e', 'E7', 'Dispuesto a aceptar a los demás.');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'm', 'M7', 'Aprobación, popularidad. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'j', 'J7', 'Su forma de expresarse. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'i', 'I7', 'Alabanzas, oportunidades, haciendo favores. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 's', 'S7', 'Alivia tensiones; promueve proyectos y personas, incluso a sí mismo. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'a', 'A7', 'Los elogios, optimismo. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'b', 'B7', 'Descuidado y sentimental; actúa en forma desorganizada; no sabe cómo llevar a cabo las cosas.');
+INSERT INTO `disc_data-2` VALUES ('promotor', 't', 'T7', 'Perder aceptación social y su autoestima.');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'se', 'SE7', 'Tuviera más control del tiempo; fuera más objetivo; fuera más sensible a lo que significa “urgente”, controlara sus emociones; cumpliera hasta el final sus promesas, tareas. ');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'o1', 'O71', 'El promotor cuenta con una extensa red de contactos que le proporciona una base activa para realizar sus negocios.  Gregario y sociable, le es fácil hacer amigos.  Rara vez se opone intencionalmente a alguien.  El promotor busca ambientes socialmente favo');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'o2', 'O72', 'En vista de que el promotor prefiere por naturaleza la interacción con otros y participa en actividades que implican contacto con gente, se interesa menos en la realización del trabajo.  Aunque su trabajo imponga actividades solitarias, seguirá buscando s');
+INSERT INTO `disc_data-2` VALUES ('promotor', 'o3', 'O73', 'Por su optimismo natural, el Promotor tiende a sobreestimar la capacidad de los demás.  Suele llegar a conclusiones favorables sin haber considerado todos los hechos.  Con entrenamiento y dirección adecuados se puede ayudar al Promotor a desarrollar objet');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL CONSEJERO', '');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'e', 'E8', 'Es fácil de abordar, afectuoso y comprensivo. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'm', 'M8', 'La amistad; la felicidad. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'j', 'J8', 'Su aceptación positiva; generalmente busca el lado bueno de las personas. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'i', 'I8', 'Las relaciones personales, al practicar la política de “puertas abiertas”. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 's', 'S8', 'Estable, predecible; una amplia esfera de amistades; sabe escuchar. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'a', 'A8', 'Acercamiento indirecto, tolerancia. ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'b', 'B8', 'Se torna demasiado flexible e íntimo; confía demasiado en todos sin distinción. .');
+INSERT INTO `disc_data-2` VALUES ('consejero', 't', 'T8', 'Presionar a los demás; que se le acuse de hacer daño.');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'se', 'SE8', 'Presenta más atención a las fechas límite; tuviera más iniciativa para realizar el trabajo.');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'o1', 'O81', 'El Consejero tiene  el don particular de resolver los problemas de los demás.  Impresiona con su afecto, empatía y comprensión.  Al Consejero le es fácil encontrar lo bueno en las personas y asume una actitud optimista.  El consejero prefiere tratar con l');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'o2', 'O82', 'El Consejero suele ser en extremo tolerante y paciente con las personas que no rinden en el trabajo.  Bajo presión, se le dificulta confrontar los problemas de desempeño en forma directa.  Suele ser demasiado indirecto para ordenar,  exigir o disciplinar ');
+INSERT INTO `disc_data-2` VALUES ('consejero', 'o3', 'O83', 'A menudo, el Consejero toma la crítica como una afrenta personal, pero responde en forma positiva si recibe atención y cumplidos por un trabajo bien hecho.  Cuando tiene un puesto de responsabilidad, suele prestar atención a la calidad de las condiciones ');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL AGENTE', '');
+INSERT INTO `disc_data-2` VALUES ('agente', 'e', 'E9', 'Acepta el afecto; rechaza la agresión. ');
+INSERT INTO `disc_data-2` VALUES ('agente', 'm', 'M9', 'Ser aceptado por los demás. ');
+INSERT INTO `disc_data-2` VALUES ('agente', 'j', 'J9', 'La tolerancia y participación.');
+INSERT INTO `disc_data-2` VALUES ('agente', 'i', 'I9', 'La Comprensión; amistad. ');
+INSERT INTO `disc_data-2` VALUES ('agente', 's', 'S9', 'Apoya; armoniza; proyecta empatía; está orientado al servicio. ');
+INSERT INTO `disc_data-2` VALUES ('agente', 'a', 'A9', 'La amabilidad. ');
+INSERT INTO `disc_data-2` VALUES ('agente', 'b', 'B9', 'Se vuelve persuasivo haciendo, si fuese necesario, uso de información que posee o de amistades clave.');
+INSERT INTO `disc_data-2` VALUES ('agente', 't', 'T9', 'El desacuerdo, el conflicto.');
+INSERT INTO `disc_data-2` VALUES ('agente', 'se', 'SE9', 'Tuviera más conciencia de quién es y de lo que puede hacer;  mostrara más firmeza y agresividad; dijera “no” en los momentos adecuados.');
+INSERT INTO `disc_data-2` VALUES ('agente', 'o1', 'O91', 'Al Agente le interesa tanto las relaciones humanas como los variados  aspectos del trabajo.   Gracias a su empatía y tolerancia sabe escuchar y se le conoce por su buena disposición.   El Agente hace que los demás sientan que se les quiere y necesita.   N');
+INSERT INTO `disc_data-2` VALUES ('agente', 'o2', 'O92', 'En cuanto al trabajo, el Agente cuenta con un excelente potencial para la organización y eficiente ejecución.  Es excelente en hacer para otros lo que ellos encuentran difícil de realizar.  El Agente busca por naturaleza la armonía y cooperación en el gru');
+INSERT INTO `disc_data-2` VALUES ('agente', 'o3', 'O93', 'Sin embargo, el Agente teme el conflicto y desacuerdo.  Su tendencia a ayudar puede instar a otros a tolerar una situación en lugar de buscar una solución del problema.   Además,  la tendencia del Agente a adoptar un perfil “bajo” en lugar de aceptar una ');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL EVALUADOR ', '');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'e', 'E10', 'Un fuerte impulso por causar buena impresión. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'm', 'M10', '“Ganar” con estilo. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'j', 'J10', 'Su capacidad de tomar iniciativa. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'i', 'I10', 'Influye en los demás al:  Hacerles competir por su reconocimiento. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 's', 'S10', 'Obtiene sus metas a través de los demás. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'a', 'A10', 'Su autoridad e ingenio. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'b', 'B10', 'Se torna intranquilo; crítico;  impaciente.');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 't', 'T10', '“Perder”; quedar mal ante los demás.');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'se', 'SE10', 'Llevara a cabo el seguimiento hasta el final; mostrara empatía al estar en desacuerdo; se marcara un ritmo más realista para sus actividades. ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'o1', 'O101', 'El  Evaluador toma las ideas creativas y las utiliza para fines prácticos.   Es competitivo y usa métodos directos para conseguir resultados.   Sin embargo, hay quienes consideran al Evaluador menos agresivo ya que suele mostrar consideración hacia los de');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'o2', 'O102', 'El Evaluador suele ser capaz de ayudar a los demás a visualizar los pasos necesarios para lograr resultados.  Por lo general, habla de un plan de acción detallado que él mismo desarrollará  para asegurar una progresión ordenada hacia los resultados.  Sin ');
+INSERT INTO `disc_data-2` VALUES ('evaluador', 'o3', 'O103', 'El Evaluador tiene un pensamiento bastante analítico y es hábil para expresar en palabras sus críticas.   Sus palabras pueden ser bastante hirientes.   El Evaluador controla mejor la situación si se relaja y disminuye su ritmo de trabajo.  Un axioma que l');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL RESOLUTIVO  ', '');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'e', 'E11', 'Individualista en lo que se refiere a sus necesidades personales.  ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'm', 'M11', 'Una nueva oportunidad; un nuevo reto.  ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'j', 'J11', 'Su capacidad para alcanzar las normas establecidas por él mismo. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'i', 'I11', 'Las soluciones a los problemas; al proyectar una imagen de poder. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 's', 'S11', 'Acepta la responsabilidad, no dice “no es mi culpa”; ofrece formas  nuevas e innovadoras de resolver problemas. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'a', 'A11', 'Del control que ejerce sobre los demás en su afán de alcanzar sus propios  resultados. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'b', 'B11', 'Se aparta cuando se tienen que hacer las cosas; se torna beligerante cuando ve su individualidad amenazada o se le cierran las puertas al reto.');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 't', 'T11', 'Al aburrimiento;  a la pérdida del control. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'se', 'SE11', 'Mostrara más paciencia, empatía;  participara y colaborara con los demás;  diera más seguimiento y atención a la importancia del control de calidad. ');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'o1', 'O111', 'El Resolutivo suele ser una persona fuertemente individualista que busca continuamente nuevos horizontes.  Como es extremadamente autosuficiente e independiente de pensamiento y acción, prefiere encontrar sus propias soluciones.   Relativamente libre de l');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'o2', 'O112', 'Aunque con bastante frecuencia tiende a ser directo y enérgico, el Resolutivo es asimismo astuto para manipular personas y situaciones.  Sin embargo, cuando se requiere que el Resolutivo coopere con otros en situaciones que limitan su individualidad, el R');
+INSERT INTO `disc_data-2` VALUES ('resolutivo', 'o3', 'O113', 'Al Resolutivo le interesa mucho alcanzar sus propias metas, así como tener oportunidades de progreso y retos.   Como su empeño se enfoca tanto en el resultado final, suele carecer de empatía y parecer indiferente a las personas.  Podría decir algo como:  ');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DE PROFESIONAL  ', '');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'e', 'E12', 'Quiere mantenerse a la altura de los demás en cuanto a esfuerzo y desempeño técnico. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'm', 'M12', 'Profundo afán por el desarrollo personal. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'j', 'J12', 'Su autodisciplina;  sus posiciones y ascensos. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'i', 'I12', 'La confianza en su habilidad para perfeccionar nuevos conocimientos; al desarrollar y seguir procedimientos y acciones “correctos”. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 's', 'S12', 'Hábil para resolver problemas técnicos y humanos;  profesionalismo en su especialidad. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'a', 'A12', 'Una atención excesiva a objetivos personales;  expectativas poco realistas sobre los demás. ');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'b', 'B12', 'Se cohibe; sensible a la crítica.');
+INSERT INTO `disc_data-2` VALUES ('profesional', 't', 'T12', 'Ser demasiado predecible;  que no se le reconozca como “experto”.');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'se', 'SE12', 'Colaborara en forma genuina para beneficio general; delegara tareas importantes a las personas apropiadas.');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'o1', 'O121', 'El profesional valora la destreza en áreas especializadas.  Su enorme deseo de “destacar en algo”, lo lleva a un esmerado control de su propio desempeño en el trabajo.  Aunque su meta es ser “el” experto en un área determinada, el Profesional da la impres');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'o2', 'O122', 'En su relación con otros, el Profesional suele proyectar un estilo relajado, diplomático y afable.  Esta actitud puede cambiar de súbito en su área de especialización cuando se concentra demasiado en alcanzar altos niveles de rendimiento.  Al valorar la a');
+INSERT INTO `disc_data-2` VALUES ('profesional', 'o3', 'O123', 'Al mismo tiempo que su naturaleza le pide concentrarse en desarrollar una propuesta organizada del trabajo y en aumentar sus propias capacidades,   El Profesional necesita asimismo ayudar a otros a perfeccionar sus talentos.  Además, necesita saber apreci');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL INVESTIGADOR   ', '');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'e', 'E13', 'Desapasionado; autodisciplinado. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'm', 'M13', 'El poder que generan la autoridad, la posición y los roles formales. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'j', 'J13', 'El uso de la información objetiva. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'i', 'I13', 'Su determinación; su tenacidad. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 's', 'S13', 'Seguimiento concienzudo para realizar su trabajo en forma constante y persistente sea individual o en grupos pequeños. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'a', 'A13', 'La franqueza; su desconfianza hacia los demás. ');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'b', 'B13', 'Tiende a interiorizar los conflictos; recuerda el mal que se le ha hecho.');
+INSERT INTO `disc_data-2` VALUES ('investigador', 't', 'T13', 'Involucrarse con las masas; vender ideas abstractas.');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'se', 'SE13', 'Fuera más flexible; aceptara a los demás; si participara más con los demás.');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'o1', 'O131', 'Objetivo y analítico, el investigador, está “enclavado en la realidad”.  Por lo general reservado, sigue con calma y firmeza un camino independiente hacia la meta establecida.  El Investigador tiene éxito en muchas cosas, no por su versatilidad sino por l');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'o2', 'O132', 'El investigador se desempeña de maravilla en tareas de naturaleza técnica que le impliquen un reto, donde pueda usar e interpretar información real y sacar conclusiones.  Responde a la lógica más que a la emoción.  Al vender o comercializar una idea, pued');
+INSERT INTO `disc_data-2` VALUES ('investigador', 'o3', 'O133', 'El Investigador prefiere trabajar solo y no se interesa en agradar a los demás.   Se le puede considerar sumamente directo, brusco y sin tacto.  Al valorar su propia capacidad de pensamiento, el Investigador evalúa a los demás por su objetividad y lógica.');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL ORIENTADO A RESULTADOS ', '');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'e', 'E14', 'Una gran expresión verbal de la fuerza del ego; muestra un fuerte individualismo. . ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'm', 'M14', 'Dominio e independencia. . ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'j', 'J14', 'Su capacidad para realizar las tareas con rapidez. ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'i', 'I14', 'Su fuerza de carácter; su persistencia. ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 's', 'S14', 'Sus acciones y actitud de “yo les muestro cómo”. ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'a', 'A14', 'La impaciencia; sentido competitivo de “ganar o perder”. ');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'b', 'B14', 'Se vuelve criticón y se dedica a encontrar errores;  se niega a trabajar en equipo; se excede en sus prerrogativas.');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 't', 'T14', 'Que otros se aprovechen de él; la lentitud, en especial en las actividades del trabajo; ser demasiado “blando” o “íntimo” con los demás.');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'se', 'SE14', 'Verbalizara su proceso de razonamiento; buscara otros puntos de vista e ideas sobre sus objetivos al resolver problemas; su preocupación por los demás fuera más genuina; fuera más paciente y humilde.');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'o1', 'O141', 'El Orientado a Resultados muestra tal confianza en sí mismo que algunos lo interpretan como arrogancia.  Busca sin descanso oportunidades que prueben y desarrollen sus capacidades para alcanzar resultados.  A estas personas les gustan las tareas difíciles');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'o2', 'O142', 'El Orientado a Resultados tiende a evitar factores que lo restrinjan, como controles directos, detalles que le consuman tiempo y trabajos rutinarios.  Enérgico y directo, este individuo puede tener dificultades con los demás.  Por ser tan independiente, e');
+INSERT INTO `disc_data-2` VALUES ('orientado a resultados', 'o3', 'O143', 'El Orientado a Resultados es rápido de pensamiento y acción.  Se impacienta con quienes son diferentes a él y los critica.  Valora a aquellos que muestran destreza para obtener resultados.  Son determinados y persistentes, incluso frente al antagonismo.  ');
+INSERT INTO `disc_data-2` VALUES ('', '', 'PATRON DEL ESPECIALISTA ', '');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'e', 'E15', 'Moderación calculada; afán de servir, de adaptarse a los demás. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'm', 'M15', 'Conservar el “status quo”, controlar el ambiente. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'j', 'J15', 'Las normas de amistad, después por su capacidad. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'i', 'I15', 'Su constancia en el desempeño; por su afán de servir, de adaptarse a las necesidades de los demás. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 's', 'S15', 'Planifica a corto plazo; es predecible, es congruente; mantiene un ritmo uniforme y seguro. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'a', 'A15', 'La modestia; su miedo a correr riesgos; su resistencia pasiva hacia las innovaciones. ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'b', 'B15', 'Se adapta a quienes tienen autoridad y a lo que opina el grupo.');
+INSERT INTO `disc_data-2` VALUES ('especialista', 't', 'T15', 'Los cambios; la desorganización.');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'se', 'SE15', 'Compartiera más sus ideas; aumentara su confianza en sí mismo basándose en la retroalimentación que recibe; utilizara métodos más sencillos y directos.');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'o1', 'O151', 'El Especialista se “lleva bien” con los demás.  Por su actitud moderada y controlada y por su comportamiento modesto, puede trabajar en armonía con diversos estilos de conducta.  El Especialista es considerado paciente y siempre está dispuesto a ayudar a ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'o2', 'O152', 'Se esfuerza por conservar pautas de comportamiento conocidos y predecibles.  El Especialista, al ser bastante eficiente en áreas especializadas, planea su trabajo, lo enfoca de manera clara y directa y consigue una notoria constancia en su desempeño.  El ');
+INSERT INTO `disc_data-2` VALUES ('especialista', 'o3', 'O153', 'El Especialista es lento para adaptarse a los cambios.  Una preparación previa le concede el tiempo que requiere para cambiar sus procedimientos y conservar su nivel de rendimiento.  El Especialista puede necesitar ayuda al inicio de un nuevo proyecto y para desarrollar métodos prácticos y sencillos para cubrir plazos establecidos.  Suele dejar a un lado los proyectos terminados para posteriormente concluirlos.  Un pequeño consejo: ¡tire algunas de esas carpetas viejas de su archivo!.   ');
