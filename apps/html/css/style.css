@@ -1,0 +1,217 @@
+/* 
+    Document   : style
+    Created on : 30/11/2013, 11:26:52 PM
+    Author     : RENEE
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.info
+{
+	display: none;
+	position: fixed;
+	width: 100%;
+	background-color: #CCC;
+}
+*
+{margin:0;
+padding: 0;}
+
+body
+{
+	background-color: #CCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+table.test{
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+.page
+{
+	width: 90%;
+	max-width: 960px;
+	margin: auto;
+	background-color: #CCC;
+	padding: 0px 5%;
+}
+div.main
+{
+	list-style-type: none;
+}
+
+div.main div.check
+{
+	background-image: url(../images/check.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.index-contador
+{
+	position:absolute;
+	width:7%;
+	top:-2%;
+	background-color:#069;
+	color:#fff;
+	font-size:1.7em;
+	text-align:center;
+	padding-top:1%;
+	padding-bottom:1%;
+	
+
+}
+div.main div.item
+{
+	text-align: center;
+	padding: 2%;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	position:relative;
+	margin-bottom: 2%;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+}
+.main div.class-0
+{
+	background-color: #FFF;
+}
+.main div.class-1
+{
+	background-color: #FFF;
+}
+
+ul.block
+{
+	display: inline-block;
+	list-style-type: none;
+	margin: auto;
+	width:100%;
+	min-width:70%;
+	
+	
+}
+.hidden
+{
+	display:none;}
+ul.block li
+{
+	display: block;
+	width: 96%;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+ul.block li span
+{
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+ul.block li label
+{
+	display: inline-block;
+	width: 13%;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCC;
+	border-left-color: #CCC;
+	cursor:pointer;
+}
+ul.block li:hover
+{
+	background-color: #FFFF75;
+}
+
+.boton
+{
+	display: block;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-color: #09F;
+	padding-top: 1%;
+	padding-right: 5%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	width: 100%;
+	margin: auto;
+	max-width: 250px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	color: #FFF;
+}
+
+
+/* resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados */
+
+
+
+.resultados
+{}
+
+.resultados h1
+{
+	display: block;
+	color: #333;
+	font-size: 1.8em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.resultados .row
+{
+	text-align: center;
+	padding: 2%;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	position: relative;
+	margin-bottom: 2%;
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	background-color: #FFF;
+}
+
+.resultados .row .label
+{
+	display: block;
+	text-align: left;
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.resultados .row .texto
+{
+	text-align: left;
+	display: block;
+	font-size: 1em;
+	line-height: 120%;
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+span.date
+{
+	display:block;
+	font-size:12px;}
+	
+	span.url
+	{
+	display: inline-block;
+	font-size: 12px;
+	background-color: #82B4FF;
+	color: #000;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	padding-top: 1px;
+	padding-right: 2px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	border: 1px solid #6AA6FF;
+}
