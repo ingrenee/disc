@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Profile extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,18 +23,43 @@ class Home extends CI_Controller {
 	
 		$num=$this->db->where('ID',$empleador_ID)->get('empleador')->num_rows();
 		
-		if($num==0):	
 		$current_user = wp_get_current_user();
+		
+		
+		
+		
+		$this->form_validation->set_rules('nombres', 'nombres', 'required');
+	
 
-		$i['ID']=$empleador_ID;
-		$i['email']=		$current_user->user_email;
-		$i['creado']=date('Y-m-d H:i:s');
-		$this->db->insert('empleador',$i);
-		endif;
+
+		if ($this->form_validation->run() == FALSE)
+		{ $data['current_user']=$current_user;
+		
+		
+ 		$data['content']=$this->load->view('profile/index',$data,true);
+			
+		}
+		else
+		{
+		
+		$up['first_name']=$this->input->post('nombres');
+		$up['ID']=$empleador_ID;
+		$user_id = wp_update_user($up );
+			
+			
+			if ( is_wp_error( $user_id ) ) {
+
+			redirect(ci_site_url('/').'profile/2');			
+
+			} else {
+				redirect(ci_site_url('/').'profile/index/1');
+			}
+		
+
+		}
 		
 		
 		
- 		$data['content']=$this->load->view('home/index',array(),true);
 		$this->load->view('template',$data);
 		}
 }

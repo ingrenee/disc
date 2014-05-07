@@ -39,7 +39,7 @@
 										<td><span class="date creado"><?PHP echo $v['creado'];?></span>
 										<span class="date modificado"><?PHP echo $v['modificado'];?></span></td>
 										<td><span class="url">
-										<?PHP echo site_url('apps/disc/psico-'.($v['ID']))?></span></td>
+										<input value="<?PHP echo site_url('apps/disc/psico-'.($v['ID']))?>" type="text"></span></td>
 										<td><a href="<?PHP echo ci_site_url('disc/editar/'.$v['ID']);?>">editar</a></td>
 										<td><a href="<?PHP echo ci_site_url('disc/resultados/'.$v['ID']);?>">Ver resultados</a></td>
 										

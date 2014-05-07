@@ -4,7 +4,7 @@ Source Host     : localhost:3306
 Source Database : hayemple_psico
 Target Host     : localhost:3306
 Target Database : hayemple_psico
-Date: 2014-04-30 18:07:08
+Date: 2014-05-07 17:50:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2855,11 +2855,12 @@ CREATE TABLE `empleador` (
   `estado` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `empleador_FKIndex1` (`empresa_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of empleador
 -- ----------------------------
+INSERT INTO `empleador` VALUES ('2', '0', null, 'nelly@gmail.com', '2014-05-07 21:10:25', null, null);
 
 -- ----------------------------
 -- Table structure for empresa
@@ -2912,13 +2913,18 @@ CREATE TABLE `operacion` (
   `nombres` int(10) unsigned DEFAULT NULL,
   `creado` datetime DEFAULT NULL,
   `modificado` datetime DEFAULT NULL,
+  `titulo` text,
+  `empresa` text,
+  `empresa_descripcion` text,
+  `estado` enum('publicado','pendiente') DEFAULT 'publicado',
   PRIMARY KEY (`ID`),
   KEY `operacion_FKIndex1` (`empleador_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of operacion
 -- ----------------------------
+INSERT INTO `operacion` VALUES ('1', '2', null, '2014-05-06 20:31:44', '2014-05-06 20:32:01', 'operaion 01', 'rrkj kljgsdlfºk', 'dlg jñdfkljhlkgfhd ghdfg', 'publicado');
 
 -- ----------------------------
 -- Table structure for usuarios
