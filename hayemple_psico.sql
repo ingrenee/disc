@@ -4,7 +4,7 @@ Source Host     : localhost:3306
 Source Database : hayemple_psico
 Target Host     : localhost:3306
 Target Database : hayemple_psico
-Date: 2014-05-07 17:50:01
+Date: 2014-05-08 18:03:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2924,7 +2924,7 @@ CREATE TABLE `operacion` (
 -- ----------------------------
 -- Records of operacion
 -- ----------------------------
-INSERT INTO `operacion` VALUES ('1', '2', null, '2014-05-06 20:31:44', '2014-05-06 20:32:01', 'operaion 01', 'rrkj kljgsdlfºk', 'dlg jñdfkljhlkgfhd ghdfg', 'publicado');
+INSERT INTO `operacion` VALUES ('1', '2', null, '2014-05-06 20:31:44', '2014-05-06 20:32:01', 'operaion 01', 'Selectiva', 'loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr ', 'publicado');
 
 -- ----------------------------
 -- Table structure for usuarios
@@ -2941,9 +2941,13 @@ CREATE TABLE `usuarios` (
   `modificado` datetime DEFAULT NULL,
   `estado` int(10) unsigned DEFAULT NULL,
   `direccion` datetime DEFAULT NULL,
+  `dni` varchar(8) DEFAULT NULL,
+  `genero` varchar(1) DEFAULT NULL,
+  `celular` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of usuarios
 -- ----------------------------
+INSERT INTO `usuarios` VALUES ('1', 'Renee michael', 'Morales', 'calhua', 'ing.renee.sis@gmail.com', null, null, null, null, null, '42864625', 'm', '992128527');
