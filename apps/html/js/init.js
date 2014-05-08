@@ -5,6 +5,23 @@
 
 
 $(document).ready(function(e) {
+	
+	
+	
+	$('.pagination a').click(function(e) {
+        e.preventDefault();
+		var id = $(this).attr('href');
+		var p=$(id).offset();
+		var alto=$('.info_user').innerHeight();
+		
+		console.log(alto);
+		p.top=p.top-alto-20;
+
+		$('body').scrollTop(p.top);
+		
+    });
+	
+	
     $('input.radio').click(function(e) {
       //  e.stopImmediatePropagation();
         var id=$(this).attr('data-c');
@@ -99,7 +116,7 @@ function verificar()
 		
 		$('.main .item').each(function(index, element) {
 		//$(this).find('')
-			
+			var id=$(this).attr('id');
 //		alert(index);
 	var i1 = $("input:radio[name ='kmas["+index+"]']:checked").val();
 
@@ -107,10 +124,20 @@ function verificar()
 			if(typeof i1 !== "undefined" && typeof i2 !=="undefined")
 			{
 				$(this).addClass('check');
+				$('.pag-'+id).addClass('check');
 				
+				$(this).removeClass('uncheck');
+				$('.pag-'+id).removeClass('uncheck');
 				}else
 				{
+					$(this).addClass('uncheck');
+					
 					$(this).removeClass('check');
+					
+					
+					$('.pag-'+id).addClass('uncheck');
+					
+					$('.pag-'+id).removeClass('check');
 					
 					r=false;
 					

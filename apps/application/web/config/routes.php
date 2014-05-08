@@ -38,7 +38,8 @@
 |
 */
 
-$route['default_controller'] = "home";
+$route['default_controller'] = "init";
+$route['psico-(:any)'] = "init/index/$1";
 $route['404_override'] = '';
 
 

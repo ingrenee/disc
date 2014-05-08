@@ -6,116 +6,150 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
+root {
+	display: block;
 }
-.info
-{
+.info {
 	display: none;
 	position: fixed;
 	width: 100%;
 	background-color: #CCC;
 }
-*
-{margin:0;
-padding: 0;}
-
-body
-{
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
 	background-color: #CCC;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 }
-
-
-table.test{
+table.test {
 	width: 100%;
 	max-width: 400px;
 	margin: auto;
 }
-.page
-{
+.page {
 	width: 90%;
 	max-width: 960px;
 	margin: auto;
 	background-color: #CCC;
-	padding: 0px 5%;
+	padding:0 5%;
+	
 }
-div.main
+.page.form
+{	padding: 8% 5%;}
+.info_user
 {
+	position:fixed !important;
+	width:100%;
+	top:0;
+	left:0px;
+	z-index:999;
+	padding:2% 0px !important;
+	border:none !important;}
+div.main {
 	list-style-type: none;
 }
 
-div.main div.check
+.instrucciones
 {
+	display: block;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #333;
+	line-height: 140%;
+}
+.pagination a
+{
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid #CCC;
+	color: #000;
+	font-size: 13px;
+	text-decoration: none;
+	min-width:20px;
+}
+div.main div.check {
 	background-image: url(../images/check.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
-
-.index-contador
-{
-	position:absolute;
-	width:7%;
-	top:-2%;
-	background-color:#069;
-	color:#fff;
-	font-size:1.7em;
-	text-align:center;
-	padding-top:1%;
-	padding-bottom:1%;
-	
-
+.index-contador {
+	position: absolute;
+	width: 7%;
+	top: -2%;
+	background-color: #069;
+	color: #fff;
+	font-size: 1.7em;
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
-div.main div.item
+.pagination
 {
+	padding-top:15px;}
+.pagination a.check
+{
+	background-color: #093;
+	color: #FFF;
+	border-top-color: #0C6;
+	border-right-color: #0C6;
+	border-bottom-color: #0C6;
+	border-left-color: #0C6;
+}
+
+.pagination a.uncheck
+{
+	background-color: #C30;
+	color: #FFF;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+}
+.item-f
+{	text-align: center;
+	padding: 2%;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	position: relative;
+	margin-bottom: 2%;
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);}
+div.main div.item {
 	text-align: center;
 	padding: 2%;
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
-	position:relative;
+	position: relative;
 	margin-bottom: 2%;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	-webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    0px 1px 1px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
 }
-.main div.class-0
-{
+.main div.class-0 {
 	background-color: #FFF;
 }
-.main div.class-1
-{
+.main div.class-1 {
 	background-color: #FFF;
 }
-
-ul.block
-{
+ul.block {
 	display: inline-block;
 	list-style-type: none;
 	margin: auto;
-	width:100%;
-	min-width:70%;
-	
-	
+	width: 100%;
+	min-width: 70%;
 }
-.hidden
-{
-	display:none;}
-ul.block li
-{
+.hidden {
+	display: none;
+}
+ul.block li {
 	display: block;
 	width: 96%;
 	border-bottom-width: 1px;
@@ -124,14 +158,12 @@ ul.block li
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
-ul.block li span
-{
+ul.block li span {
 	display: inline-block;
 	width: 50%;
 	text-align: left;
 }
-ul.block li label
-{
+ul.block li label {
 	display: inline-block;
 	width: 13%;
 	border-right-width: 1px;
@@ -140,15 +172,12 @@ ul.block li label
 	border-left-style: solid;
 	border-right-color: #CCC;
 	border-left-color: #CCC;
-	cursor:pointer;
+	cursor: pointer;
 }
-ul.block li:hover
-{
+ul.block li:hover {
 	background-color: #FFFF75;
 }
-
-.boton
-{
+.boton {
 	display: block;
 	border-top-style: none;
 	border-right-style: none;
@@ -166,26 +195,23 @@ ul.block li:hover
 	text-transform: uppercase;
 	font-size: 1.5em;
 	color: #FFF;
+	cursor:pointer;
+
 }
-
-
 /* resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados resultados */
 
 
 
-.resultados
-{}
-
-.resultados h1
-{
+.resultados {
+}
+.resultados h1 {
 	display: block;
 	color: #333;
 	font-size: 1.8em;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.resultados .row
-{
+.resultados .row {
 	text-align: center;
 	padding: 2%;
 	-webkit-border-radius: 7px;
@@ -198,20 +224,21 @@ ul.block li:hover
 	box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
 	background-color: #FFF;
 }
-
-.resultados .row .label
-{
+.resultados .row .label {
 	display: block;
 	text-align: left;
 	font-size: 1.2em;
 	margin-bottom: 5px;
 	font-weight: bold;
 }
-
-.resultados .row .texto
-{
+.resultados .row .texto {
 	text-align: left;
 	display: block;
 	font-size: 1em;
 	line-height: 120%;
+}
+
+.uncheck
+{
+	border: 1px solid #F00;
 }
