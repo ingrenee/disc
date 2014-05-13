@@ -4,7 +4,7 @@ Source Host     : localhost:3306
 Source Database : hayemple_psico
 Target Host     : localhost:3306
 Target Database : hayemple_psico
-Date: 2014-05-08 18:03:57
+Date: 2014-05-13 15:38:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -2890,18 +2890,21 @@ CREATE TABLE `form` (
   `usuarios_ID` int(10) unsigned NOT NULL,
   `creado` datetime DEFAULT NULL,
   `modificado` datetime DEFAULT NULL,
-  `comentarios` text,
+  `resumen` text,
   `estado` int(10) unsigned DEFAULT NULL,
   `info` text,
+  `perfil_disc` varchar(40) DEFAULT NULL,
+  `detalles` text,
   PRIMARY KEY (`ID`),
   KEY `form_FKIndex1` (`usuarios_ID`),
   KEY `form_FKIndex2` (`operacion_ID`),
   KEY `form_FKIndex3` (`empleador_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of form
 -- ----------------------------
+INSERT INTO `form` VALUES ('2', '2', '1', '1', '2014-05-13 18:01:52', '2014-05-13 18:01:52', '\r\n<div class=\"resultados\">\r\n  <div class=\"page\">\r\n    <h1>Especialista</h1>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Emociones </div>\r\n      <div class=\"texto\"> Moderación calculada; afán de servir, de adaptarse a los demás.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Meta </div>\r\n      <div class=\"texto\"> Conservar el “status quo”, controlar el ambiente.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Juzga a los demas por </div>\r\n      <div class=\"texto\"> Las normas de amistad, después por su capacidad.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Influye en los demas mediante: </div>\r\n      <div class=\"texto\"> Su constancia en el desempeño; por su afán de servir, de adaptarse a las necesidades de los demás.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Su valor para la organizacion: </div>\r\n      <div class=\"texto\"> Planifica a corto plazo; es predecible, es congruente; mantiene un ritmo uniforme y seguro.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Abusa de </div>\r\n      <div class=\"texto\"> La modestia; su miedo a correr riesgos; su resistencia pasiva hacia las innovaciones.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Bajo presion </div>\r\n      <div class=\"texto\"> Se adapta a quienes tienen autoridad y a lo que opina el grupo. </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> Teme </div>\r\n      <div class=\"texto\"> Los cambios; la desorganización. </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> </div>\r\n      <div class=\"texto\"> El Especialista se “lleva bien” con los demás.  Por su actitud moderada y controlada y por su comportamiento modesto, puede trabajar en armonía con diversos estilos de conducta.  El Especialista es considerado paciente y siempre está dispuesto a ayudar a quienes considera sus amigos.  De hecho, tiende a desarrollar en el trabajo una estrecha relación con un grupo relativamente reducido de compañeros.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> </div>\r\n      <div class=\"texto\"> Se esfuerza por conservar pautas de comportamiento conocidos y predecibles.  El Especialista, al ser bastante eficiente en áreas especializadas, planea su trabajo, lo enfoca de manera clara y directa y consigue una notoria constancia en su desempeño.  El reconocimiento que recibe de los demás le ayuda a conservar este nivel.  </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"label\"> </div>\r\n      <div class=\"texto\"> El Especialista es lento para adaptarse a los cambios.  Una preparación previa le concede el tiempo que requiere para cambiar sus procedimientos y conservar su nivel de rendimiento.  El Especialista puede necesitar ayuda al inicio de un nuevo proyecto y para desarrollar métodos prácticos y sencillos para cubrir plazos establecidos.  Suele dejar a un lado los proyectos terminados para posteriormente concluirlos.  Un pequeño consejo: ¡tire algunas de esas carpetas viejas de su archivo!.    </div>\r\n    </div>\r\n  </div>\r\n</div>', null, null, 'Especialista', 'Código obtenido: 3454<br> Ponderado(DISC+): 3/6/10/9<br> Ponderado(DISC-): 6/5/9/	8<br>Segmentos:3/4/5/4');
 
 -- ----------------------------
 -- Table structure for operacion
@@ -2924,7 +2927,7 @@ CREATE TABLE `operacion` (
 -- ----------------------------
 -- Records of operacion
 -- ----------------------------
-INSERT INTO `operacion` VALUES ('1', '2', null, '2014-05-06 20:31:44', '2014-05-06 20:32:01', 'operaion 01', 'Selectiva', 'loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr ', 'publicado');
+INSERT INTO `operacion` VALUES ('1', '2', null, '2014-05-06 20:31:44', '2014-05-13 17:12:11', 'operaion 01', 'Selectiva', 'loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr loremp ipsun nipsum tesim nupsim lesr ', 'publicado');
 
 -- ----------------------------
 -- Table structure for usuarios
@@ -2944,10 +2947,12 @@ CREATE TABLE `usuarios` (
   `dni` varchar(8) DEFAULT NULL,
   `genero` varchar(1) DEFAULT NULL,
   `celular` varchar(15) DEFAULT NULL,
+  `alertas-email` int(11) DEFAULT '1',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of usuarios
 -- ----------------------------
-INSERT INTO `usuarios` VALUES ('1', 'Renee michael', 'Morales', 'calhua', 'ing.renee.sis@gmail.com', null, null, null, null, null, '42864625', 'm', '992128527');
+INSERT INTO `usuarios` VALUES ('1', 'Renee michael', 'Morales', 'calhua', 'ing.renee.sis@gmail.com', null, null, null, null, null, '42864625', 'm', '992128527', null);
+INSERT INTO `usuarios` VALUES ('2', 'Renee morales calhua', 'morales', 'calhua', 'renee17_@hotmail.com', null, null, null, null, null, '42864625', 'm', '992128527', '1');
