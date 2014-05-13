@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= "http://www.offline.yo/disc/apps/";
+$config['base_url']	= "http://test.hayempleo.com/apps/";
 
 /*
 |--------------------------------------------------------------------------
