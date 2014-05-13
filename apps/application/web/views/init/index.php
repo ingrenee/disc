@@ -1,7 +1,7 @@
 
 <div class="row">
 <div class="large-12 columns">
-<h1>Prueba de selecci&oacute;n</h1>
+<h1 class="title">Prueba de selecci&oacute;n</h1>
 </div>
 
 </div>
@@ -17,7 +17,7 @@
 </div>
 
 <div class="large-12 columns">
-<p> <?PHP echo $root['empresa_descripcion'];?></p>
+<p class="descripcion"> <?PHP echo $root['empresa_descripcion'];?></p>
 </div>
 
 </div>
@@ -29,7 +29,7 @@
 </div>
 </div>
 
-<form method="post" action="">
+<form method="post" action="" id="form">
   <div class="row">
     <div class="large-12 columns">
       <label>Nombre completo
@@ -65,7 +65,7 @@
   </div>
   <div class="row">
     <div class="large-6 columns">
-      <label>Género</label>
+      <label class="genero">Género:</label>
       <input type="radio" name="genero" value="m" id="pokemonRed"><label for="pokemonRed">Masculino</label>
       <input type="radio" name="genero" value="f" id="pokemonBlue"><label for="pokemonBlue">Femenino</label>
     
@@ -95,8 +95,9 @@
   </div>
   
   <div class="row">
-  <div class="large-6 columns">
-  <button type="submit">Continuar</button>
+  <div class="large-12 columns" style="text-align:center; margin-top:20px;
+  margin-bottom:20px;">
+  <button type="submit" class="continuar">Continuar</button>
   
   
   </div>

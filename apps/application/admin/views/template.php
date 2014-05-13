@@ -28,7 +28,7 @@ $path=base_url('html/theme01/').'/';
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
 				<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-						<a class="navbar-brand" href="index.html">SB Admin v2.0</a> </div>
+						<a class="navbar-brand" href="<?PHP echo ci_site_url('');?>">Test DISC | Panel de administración</a> </div>
 				<!-- /.navbar-header -->
 				
 				<ul class="nav navbar-top-links navbar-right">
@@ -127,9 +127,9 @@ $path=base_url('html/theme01/').'/';
 						<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i> </a>
 								<ul class="dropdown-menu dropdown-user">
 										<li><a href="<?PHP echo site_url('wp-admin/profile.php');?>"><i class="fa fa-user fa-fw"></i> User Profile</a> </li>
-										<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> </li>
+										<li style=" display:none;"><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> </li>
 										<li class="divider"></li>
-										<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
+										<li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
 								</ul>
 								<!-- /.dropdown-user --> 
 						</li>
@@ -154,23 +154,15 @@ $path=base_url('html/theme01/').'/';
 										
 										
 										<li> 
-										<a href="#"><i class="fa fa-sitemap fa-fw"></i> Pruebas DISC<span class="fa arrow"></span></a>
+										<a href="#"><i class="fa fa-sitemap fa-fw"></i> Test DISC<span class="fa arrow"></span></a>
 												<ul class="nav nav-second-level">
-														<li> <a href="<?PHP echo ci_site_url('disc/agregar/');?>">Agregar Prueba DISC</a> </li>
-														<li> <a href="<?PHP echo ci_site_url('disc/listar/');?>">Listar pruebas</a> </li>
-														<li> <a href="#">Third Level <span class="fa arrow"></span></a>
-																<ul class="nav nav-third-level">
-																		<li> <a href="#">Third Level Item</a> </li>
-																		<li> <a href="#">Third Level Item</a> </li>
-																		<li> <a href="#">Third Level Item</a> </li>
-																		<li> <a href="#">Third Level Item</a> </li>
-																</ul>
-																<!-- /.nav-third-level --> 
-														</li>
+														<li> <a href="<?PHP echo ci_site_url('disc/agregar/');?>">Agregar Test DISC</a> </li>
+														<li> <a href="<?PHP echo ci_site_url('disc/listar/');?>">Listar Test's</a> </li>
+														
 												</ul>
 												<!-- /.nav-second-level --> 
 										</li>
-										<li> <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+										<li class="" style="display:none;"> <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
 												<ul class="nav nav-second-level">
 														<li> <a href="blank.html">Blank Page</a> </li>
 														<li> <a href="login.html">Login Page</a> </li>
@@ -199,7 +191,10 @@ $path=base_url('html/theme01/').'/';
 <script src="<?PHP echo $path;?>js/jquery-1.10.2.js"></script> 
 <script src="<?PHP echo $path;?>js/bootstrap.min.js"></script> 
 <script src="<?PHP echo $path;?>js/plugins/metisMenu/jquery.metisMenu.js"></script> 
-
+<link href="<?PHP echo $path;?>css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+	
+	<script src="<?PHP echo $path;?>js/jquery-ui-1.9.2.custom.js"></script>
+    
 <!-- Page-Level Plugin Scripts - Dashboard --> 
 <script src="<?PHP echo $path;?>js/plugins/morris/raphael-2.1.0.min.js"></script> 
 <script src="<?PHP echo $path;?>js/plugins/morris/morris.js"></script> 

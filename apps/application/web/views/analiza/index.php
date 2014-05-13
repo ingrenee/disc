@@ -1,18 +1,7 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Documento sin título</title>
-<link href="<?PHP echo base_url(); ?>/html/css/style.css"rel="stylesheet" type="text/css"/>
-<link href="../../../html/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?PHP echo base_url(); ?>/html/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="<?PHP echo base_url(); ?>/html/js/init.js"></script>
-</head>
 
-<body>
 <div class="resultados">
   <div class="page">
-    <h1><?PHP echo $perfil;?></h1>
+    <h1><?PHP echo $perfil_disc;?></h1>
     <div class="row">
       <div class="label"> Emociones </div>
       <div class="texto"> <?PHP echo $data['e']?> </div>
@@ -59,5 +48,3 @@
     </div>
   </div>
 </div>
-</body>
-</html>

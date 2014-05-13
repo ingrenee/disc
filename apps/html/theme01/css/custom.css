@@ -8,16 +8,46 @@ span.date
 	
 	span.url
 	{
-	display: inline-block;
+	display: block;
 	font-size: 12px;
-	background-color: #82B4FF;
-	color: #000;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	padding-top: 1px;
-	padding-right: 2px;
-	padding-bottom: 1px;
-	padding-left: 2px;
-	border: 1px solid #6AA6FF;
+
+
 }
+
+
+.url input
+{
+	width:80%;}
+	
+	.url-info
+	{
+	font-size: 12px;
+	color: #333;
+	font-weight: normal;
+		}
+		
+		.detalles-resumen
+		{
+			max-height:600px;
+			overflow:auto;
+			width:100%;
+			}
+		.detalles-resumen  .resultados .row
+		{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #333;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+			}
+		
+		.detalles-resumen  .resultados .row .texto
+		{font-size:0.9em;
+			}
+		.detalles-resumen  .resultados .row .label
+		{
+			color:#000;
+			margin-bottom:0px !important;
+			font-size:0.9em;}

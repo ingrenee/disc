@@ -107,5 +107,36 @@ class Disc extends CI_Controller {
 				$data['content']=$this->load->view('disc/listar',$data, true);
 					$this->load->view('template', $data);
 				}
+				
+				
+				
+				function resultados()
+				{
+					$w['form.operacion_ID']=$this->uri->segment(3);
+					
+					
+
+					
+					$w['form.empleador_ID']=get_current_user_id();
+
+
+					$data['ope']=$this->db->where('ID',$w['form.operacion_ID'])
+					->where('empleador_ID',$w['form.empleador_ID'])
+					->get('operacion')->row_array();
+										
+					$form=$this->db->select('ID')->where($w)->get('form')->row_array();
+					
+					
+					$this->db->select('form.*,usuarios.email, usuarios.nombres, usuarios.paterno, usuarios.materno, usuarios.telefono, usuarios.celular, usuarios.dni, form.creado  as f_creado');
+					$this->db->where($w);
+$this->db->from('form');
+$data['root']=$this->db->join('usuarios', 'usuarios.ID = form.usuarios_ID')->get();
+
+
+				$data['content']=$this->load->view('disc/resultados',$data, true);	
+					$this->load->view('template', $data);
+					
+					
+					}
 			
 }

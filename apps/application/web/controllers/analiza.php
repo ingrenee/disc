@@ -20,6 +20,21 @@ class Analiza extends CI_Controller {
 	public function index()
 	{
 		
+		$operacion=$this->session->userdata('operacion');
+		
+
+		
+		/* id de usuario*/
+		$operacion_id=$operacion['id'];
+		$usuario_id=$operacion['usuario_ID'];
+		$empleador_id=$operacion['empleador_ID'];
+		/*  id  de empleoador*/
+		/* id de operacion */
+		/* */
+		
+		
+		
+		
 		$d1=$this->input->post('d1');
 		$d2=$this->input->post('d2');
 		
@@ -55,8 +70,18 @@ $seg_s=$this->segmentos_s($dif_s);
 $seg_c=$this->segmentos_c($dif_c);
 
 
-$codigo=$seg_d.$seg_i.$seg_s.$seg_c;
+		$codigo=$seg_d.$seg_i.$seg_s.$seg_c;
 
+
+
+		$detalles='Código obtenido: '.$codigo;
+		$detalles.='<br>';
+		$detalles.=' Ponderado(DISC+): '.$d1.'/'.$i1.'/'.$s1.'/'.$c1;
+		$detalles.='<br>';
+		$detalles.=' Ponderado(DISC-): '.$d2.'/'.$i2.'/'.$s2.'/	'.$c2;
+		$detalles.='<br>';
+		$detalles.='Segmentos:'.$seg_d.'/'.$seg_i.'/'.$seg_s.'/'.$seg_c;
+		
 		
 		$r=$this->db->where('codigo',$codigo)->get('disc_codigos')->result_array();
 		
@@ -71,19 +96,70 @@ $codigo=$seg_d.$seg_i.$seg_s.$seg_c;
 		
 		
 		$data['data']=$tmp;
-		$data['perfil']=$r[0]['perfil'];
-		$this->load->view('analiza/index',$data);
+		$data['perfil_disc']=$r[0]['perfil'];
+		
+		
+		$form['resumen']=$this->load->view('analiza/index',$data,true);
 		
 //		 echo $disc_pos.'**'.$disc_neg;
 		
+		$form['detalles']=$detalles;
+		$form['perfil_disc']=$r[0]['perfil'];
+		$form['modificado']=date('Y-m-d H:i:s');
+		$form['creado']=date('Y-m-d H:i:s');
+		$form['empleador_ID']=$empleador_id;
+		$form['usuarios_ID']=$usuario_id;
+		$form['operacion_ID']=$operacion_id;
 		
 		
-					
+		/*  guardar  formulario */
+		$this->db->insert('form',$form);
+		$insert_id = $this->db->insert_id();
+		/*************************/
+		
+		$operacion['form_ID']=$insert_id;
+		$this->session->set_userdata('operacion',$operacion);
+		
+		$info['creado']=$form['creado'];
+		
+		$this->session->set_userdata('info',$info);	
+	
+		$data['form_ID']=$insert_id;
+
+		
+		redirect(site_url('/').'analiza/final_disc');					
 		
 
 	}
 	
-	
+	function get_usuario($data)
+	{
+		$w['ID']=$data;
+		return $this->db->select(' nombres, paterno, materno, email')->where($w)->get('usuarios')->row_array();
+		
+		}
+		
+			function get_operacion($data)
+	{
+		$w['ID']=$data;
+		return $this->db->select(' * ')->where($w)->get('usuarios')->row_array();
+		
+		}
+function final_disc()
+{
+			$operacion=$this->session->userdata('operacion');
+			
+			
+			
+			$data['info']=$this->session->userdata('info');
+			$data['usuario']=$this->get_usuario($operacion['usuario_ID']);
+			
+			
+			$data['form_ID']=$operacion['form_ID'];
+			$this->load->view('analiza/final',$data);
+			
+			
+	}	
 	function segmentos_d($v)
 	{
 		$s['-8']=1;

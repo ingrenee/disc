@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+    <title> Test DISC </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Documento sin título</title>
         <link href="<?PHP echo base_url(); ?>/html/css/style.css"rel="stylesheet" type="text/css"/>
@@ -16,8 +17,12 @@
 
         <div class="page form">
 		<div class="main">
-        <div class=" info_user item-f class-0">
+       
         
+        <div class=" info_user item-f class-0">
+         <div class="fila">
+         <h1 class="title">Test DISC</h1>
+         </div>
         <div class="fila">Candidato: <?PHP echo $usuario['nombres'];?>, <?PHP echo $usuario['paterno'];?>  <?PHP echo $usuario['materno'];?></div>
         
         <div class="fila">Email: <?PHP echo $usuario['email'];?></div>
@@ -39,7 +44,7 @@
 		<div class="info"  id="info">Info</div>
         
         <div class="instrucciones">
-        <p>En cada uno de los 28 grupos de palabras, escoja la palabra que más lo(a) represente y márquela en la columna MAS  y escoja una palabra que menos lo(a) represente y márquela en la columna MENOS.</p>
+        <p><strong>Instrucciones:</strong> En cada uno de los 28 grupos de palabras, escoja la palabra que más lo(a) represente y márquela en la columna MAS  y escoja una palabra que menos lo(a) represente y márquela en la columna MENOS.</p>
         </div>
         
         
@@ -59,7 +64,7 @@
                             
                             <li>
                                 <span class="index">&nbsp;</span>
-                                <label>Mas</label><label>Menos</label>
+                                <label>M&aacute;s</label><label>Menos</label>
                             </li>
                             <?PHP foreach ($v as $kk => $vv):
                                 ?>

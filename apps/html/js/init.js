@@ -8,6 +8,55 @@ $(document).ready(function(e) {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	$("#form").validate({
+		rules: {
+			nombres: {
+				required: true
+			},		
+			paterno: {
+				required: true
+			},
+			materno: {
+				required: true
+			},	
+			dni: {
+				required: true,
+				digits: true,
+				minlength: 8,
+			},			
+			email: {
+				required: true,
+				email: true
+			},
+			celular: {
+				required: true,
+				digits: true
+			},
+		},
+		messages: {
+			nombres: "",
+			paterno: "",
+			materno: "",			
+
+			dni: "",
+			email: "",
+			celular: "",
+		},
+	});
+		
+	
+	
+	/************************/
+	
 	$('.pagination a').click(function(e) {
         e.preventDefault();
 		var id = $(this).attr('href');
@@ -168,3 +217,5 @@ function enviar()
 		{ 
 		alert(456);
 		return false;}
+		
+		

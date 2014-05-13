@@ -25,9 +25,9 @@ class Init extends CI_Controller {
 		$this->form_validation->set_rules('nombres', 'Nombres', 'required');
 		$this->form_validation->set_rules('paterno', 'Apellido paterno', 'required');
 		$this->form_validation->set_rules('materno', 'Apellido materno', 'required');
-		$this->form_validation->set_rules('celular', 'número celular/telefono', 'required');
-		$this->form_validation->set_rules('email', 'email', 'required');
-		$this->form_validation->set_rules('dni', 'dni', 'required');
+		$this->form_validation->set_rules('celular', 'número celular/telefono', 'required|min_length[9]|max_length[15]|numeric');
+		$this->form_validation->set_rules('email', 'email', 'required|valid_email');
+		$this->form_validation->set_rules('dni', 'dni', 'required|min_length[8]|max_length[8]|numeric');
 		$this->form_validation->set_rules('genero', 'genero', 'required');		
 
 $w['ID']=$id;

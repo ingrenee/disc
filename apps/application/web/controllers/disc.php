@@ -277,6 +277,8 @@ $data['t']=$t;
 		return $this->db->select(' nombres, paterno, materno, email')->where($w)->get('usuarios')->row_array();
 		
 		}
+		
+
 	
 	function  combina($str,$num)
 	{
